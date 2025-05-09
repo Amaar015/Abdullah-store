@@ -1,0 +1,149 @@
+1. Home Page (Public)
+Components:
+
+Navbar (Logo, Search, Login/Register, Cart Icon, Categories Dropdown)
+
+Hero Banner (Promotions / Featured Products)
+
+Product Categories Section
+
+Featured Products / Trending Products
+
+Footer (Links, Socials, Contact)
+
+🛍️ 2. Product Listing Page (Category-wise)
+Components:
+
+Sidebar Filters (Brand, Price Range, Ratings, Availability)
+
+Product Grid/List (Image, Name, Price, Quick Add to Cart)
+
+Pagination / Infinite Scroll
+
+📦 3. Product Detail Page
+Sections:
+
+Product Image Carousel
+
+Product Title, Price, Discount, Availability
+
+Add to Cart / Buy Now Button
+
+Ratings (Stars), Reviews (Comments), Review Form
+
+Technical Specifications (tab or accordion)
+
+Related Products (carousel/grid below)
+
+Favorite/Wishlist Button
+
+👤 4. User Dashboard (After Login)
+Tabs or Sidebar:
+
+🛒 Cart
+
+Product List with quantity change, remove option, total cost
+
+❤️ Favorites
+
+Saved/favorite products
+
+📦 My Orders
+
+Order history with status (Ordered, Shipped, Delivered, Cancelled)
+
+⭐ My Reviews
+
+List of reviews given with edit/delete option
+
+🧾 Invoices / Downloads
+
+Past purchase invoices
+
+✏️ Edit Profile
+
+Name, Address, Password, etc.
+
+💳 5. Checkout Page
+Steps (Multi-Step Form):
+
+Address & Delivery Info
+
+Payment Method (Card, COD, Bank Transfer)
+
+Order Summary
+
+Confirm and Pay
+
+Success Screen (with Order ID)
+
+🎛️ 6. Admin Dashboard
+Sidebar or Tabbed UI with the following sections:
+
+📊 Dashboard Home
+
+Total Products, Orders, Sales, Users (Stats/Charts)
+
+🛍️ Manage Products
+
+Add New Product (form with image, desc, price, etc.)
+
+Edit/Delete Product
+
+Stock Management
+
+👥 Manage Users
+
+List of users, roles, status
+
+📦 Orders
+
+View and update order status (Processing, Shipped, Delivered, Cancelled)
+
+📈 Sales Reports
+
+Time-based revenue, bestsellers
+
+📝 Product Reviews
+
+Moderate/edit/delete user reviews
+
+🔐 Authentication Pages
+Login
+
+Register
+
+Forgot Password
+
+⚙️ Other Essential Components
+Toast Notifications (success/error messages)
+
+Modal Dialogs (product quick view, confirm delete, etc.)
+
+Responsive Design (mobile, tablet friendly)
+
+Dark Mode (optional modern touch)
+
+✅ Optional (Advanced Features to Consider)
+Coupon System
+
+Affiliate Links / Referrals
+
+Product Variants (sizes, colors)
+
+Product Comparison Tool
+
+Real-time Stock Updates
+
+Push Notifications (for order status)
+
+Multi-language Support
+
+Admin Roles & Permissions
+
+
+
+UI Desing ideas
+
+https://www.figma.com/design/WVM24F4fyjiOJ4qPJXjgKj/Emmable--e-Commerce-Website-Design-Desktop-Version--Preview-?node-id=0-1&p=f&t=bO79KFGOeBSdcdgo-0
+https://www.figma.com/design/7wcP9nnHhnEncQLd1QCvri/75--Ecommerce-Landing-Page-Templates--Community-?node-id=0-1&p=f&t=sCjhB12j2qLIONs4-0
