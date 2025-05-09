@@ -3,3 +3,9 @@
   margin: 0;
   border: none;
 }
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #eee;
+}

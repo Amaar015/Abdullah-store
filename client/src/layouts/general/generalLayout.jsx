@@ -1,12 +1,17 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import Top from "../../components/Top";
 
 const GeneralLayout = () => {
   return (
-    <div>
-      <h1>General Layout</h1>
+    <>
+      <Top />
+      <Navbar />
       <Outlet />
-    </div>
+      <Footer />
+    </>
   );
 };
 
