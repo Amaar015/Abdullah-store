@@ -9,7 +9,7 @@ const Top = () => {
       alignItems={"center"}
       justifyContent={"space-between"}
       sx={{
-        padding: { lg: "0.6rem 6rem", md: "0.6rem 2rem" },
+        padding: { md: "0.6rem 4rem", sm: "0.6rem 2rem" },
         display: { xs: "none", md: "flex" },
         bgcolor: "#6a5acd",
         color: "#eee",

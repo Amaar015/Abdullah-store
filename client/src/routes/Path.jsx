@@ -5,14 +5,12 @@ function path(root, sublink) {
 const roots = "/";
 const auth = "/auth/";
 const product = "/products";
-const category = "";
 export const Path = {
   root: roots,
   general: {
     home: path(roots, "home"),
     contact: path(roots, "contact"),
     blogs: path(roots, "blogs"),
-    blogDetail: path(roots, "blogs/:id"),
   },
   products: {
     all: path(product, ""),
@@ -23,7 +21,6 @@ export const Path = {
     checkout_payment: path(product, "/checkout/payment"),
     checkout_reviewOrder: path(product, "/checkout/revieworder"),
     checkout_completion: path(product, "/checkout/completion"),
-    category: (category = "") => path(product, category ? `/${category}` : ""),
   },
   auth: {
     login: path(auth, "login"),
@@ -31,5 +28,4 @@ export const Path = {
     forget_password: path(auth, "forget-password"),
     reset_password: path(auth, "reset-password"),
   },
-  admin: {},
 };
