@@ -9,3 +9,14 @@
   cursor: pointer;
   color: #eee;
 }
+
+/* In your CSS file */
+.custom-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #888;
+}
+
+.custom-link:hover {
+  color: #fff;
+}

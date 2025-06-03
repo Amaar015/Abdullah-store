@@ -1,6 +1,6 @@
 import { IconButton, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -11,14 +11,16 @@ import Search from "./Search";
 import Cart from "./Cart";
 
 const Navbar = () => {
+  const isLogin = false;
   const [open, setOpen] = useState(false);
+  const [activeModal, setActiveModal] = useState(null);
   const handleOpen = () => setOpen(true);
+  const navigate = useNavigate();
   const handleClose = () => {
     setOpen(false);
     setActiveModal(null); // close dropdown type
   };
 
-  const [activeModal, setActiveModal] = useState(null);
   useEffect(() => {
     const handleResize = () => {
       if (
@@ -44,7 +46,9 @@ const Navbar = () => {
     }
     setActiveModal((prev) => (prev === type ? null : type));
   };
-  console.log({ ActiveModal_______1: activeModal });
+  const handleNavigate = (to) => {
+    navigate(to);
+  };
   return (
     <Stack
       direction={"row"}
@@ -59,28 +63,28 @@ const Navbar = () => {
       </Typography>
       <StyledStack sx={{ display: { xs: "none", md: "flex" } }}>
         <Link
-          to={"/about"}
+          to={"/home"}
           className="link"
           style={{ fontSize: "1.2rem", color: "#333" }}
         >
           Home
         </Link>
         <Link
-          to={"/help"}
+          to={"/"}
           className="link"
           style={{ fontSize: "1.2rem", color: "#333" }}
         >
           Products
         </Link>
         <Link
-          to={"/about"}
+          to={"/blogs"}
           className="link"
           style={{ fontSize: "1.2rem", color: "#333" }}
         >
           Our Blogs
         </Link>
         <Link
-          to={"/help"}
+          to={"/contact"}
           className="link"
           style={{ fontSize: "1.2rem", color: "#333" }}
         >
@@ -101,14 +105,16 @@ const Navbar = () => {
         >
           <ShoppingBagIcon />
         </IconButton>
-        {true ? (
+        {isLogin ? (
           <IconButton
+            onClick={() => handleNavigate("/profile")}
             sx={{ width: "1.5rem", fontSize: "1.2rem", color: "#333" }}
           >
             <AccountCircleIcon />
           </IconButton>
         ) : (
           <IconButton
+            onClick={() => handleNavigate("/login")}
             sx={{ width: "1.5rem", fontSize: "1.2rem", color: "#333" }}
           >
             <LoginIcon />

@@ -1,0 +1,18 @@
+.btn {
+  width: 80%;
+  background: #6a5acd;
+  height: 40px;
+  color: #fafafa;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid #6a5acd;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background: #fafafa;
+  color: #6a5acd;
+  border: 2px solid #6a5acd;
+}
