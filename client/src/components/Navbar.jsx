@@ -54,9 +54,13 @@ const Navbar = () => {
     <Stack
       direction={"row"}
       alignItems={"center"}
+      position={"relative"}
+      zIndex={1}
       justifyContent={"space-between"}
       sx={{
+        bgcolor: "#fff",
         padding: { md: "0.8rem 4rem", xs: "0.8rem 1rem" },
+        boxShadow: "0px 1px 10px rgba(0, 0, 0, 0.12)",
       }}
     >
       <Typography fontSize={{ sm: "2rem", xs: "1.5rem" }} fontWeight={"bold"}>

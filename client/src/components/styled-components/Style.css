@@ -16,3 +16,21 @@
   color: #6a5acd;
   border: 2px solid #6a5acd;
 }
+
+.btn2 {
+  width: 100%;
+  background: #6a5acd;
+  height: 40px;
+  color: #fafafa;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #6a5acd;
+  transition: all 0.3s ease-in-out;
+}
+.btn2:hover {
+  background: #5d4fb6fd;
+  color: #fafafa;
+}

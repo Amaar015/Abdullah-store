@@ -1,4 +1,4 @@
-import { List, ListItem, Stack, Typography } from "@mui/material";
+import { Divider, List, ListItem, Stack, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import InstagramIcon from "@mui/icons-material/Instagram";
@@ -78,6 +78,12 @@ const Footer = () => {
             </Link>
           </Stack>
         </Stack>
+      </Stack>
+      <Divider sx={{ backgroundColor: "#fff", marginTop: "2rem" }} />
+      <Stack justifyContent={"center"} alignItems={"center"} marginTop={"1rem"}>
+        <Typography fontSize={{ xs: "0.8rem", sm: "1rem" }}>
+          Copyright 2025 &#169; Abdullah WooCommerce Theme. All right reserved.
+        </Typography>
       </Stack>
     </Stack>
   );

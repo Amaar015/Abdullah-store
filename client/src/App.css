@@ -1,6 +1,6 @@
 * {
-  padding: 0;
-  margin: 0;
+  padding: 0rem;
+  margin: 0rem;
   border: none;
 }
 
@@ -22,3 +22,12 @@
 }
 
 /* Auth Form Login Register and OTP */
+
+.auth-form {
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
