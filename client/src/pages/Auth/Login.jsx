@@ -2,8 +2,8 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div>
-      <div>Register</div>
+    <div className="auth-form">
+      <div></div>
     </div>
   );
 };

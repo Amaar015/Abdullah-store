@@ -52,3 +52,122 @@ export const recentSearch = [
     inCart: true,
   },
 ];
+
+export const NavItems = [
+  {
+    id: 1,
+    name: "Home",
+    link: "/home" || "/",
+  },
+  {
+    id: 2,
+    name: "Products",
+    link: "/products",
+  },
+  {
+    id: 3,
+    name: "Our Blogs",
+    link: "/blogs",
+  },
+  {
+    id: 4,
+    name: "Contact Us",
+    link: "/contact",
+  },
+  {
+    id: 5,
+    name: "About Us",
+    link: "/about-us",
+  },
+  {
+    id: 6,
+    name: "Help",
+    link: "/help",
+  },
+];
+
+export const footerItems = [
+  {
+    id: 1,
+    title: "Discover",
+    links: [
+      {
+        id: 1.1,
+        name: "Home",
+        link: "/home" || "/",
+      },
+      {
+        id: 1.2,
+        name: "About Us",
+        link: "/about-us",
+      },
+      {
+        id: 1.3,
+        name: "Blogs",
+        link: "/blogs" || "/",
+      },
+      {
+        id: 1.4,
+        name: "Contact Us",
+        link: "/contact",
+      },
+      {
+        id: 1.5,
+        name: "Products",
+        link: "/products",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "About",
+    links: [
+      {
+        id: 2.1,
+        name: "Client",
+        link: "/clients" || "/",
+      },
+      {
+        id: 2.2,
+        name: "Team",
+        link: "/team",
+      },
+      {
+        id: 2.3,
+        name: "Career",
+        link: "/career" || "/",
+      },
+      {
+        id: 2.4,
+        name: "Testimonial",
+        link: "/testimonial",
+      },
+      {
+        id: 2.5,
+        name: "Journal",
+        link: "/journal",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "About",
+    links: [
+      {
+        id: 2.1,
+        name: "Privacy Policy",
+        link: "/privacy-policy" || "/",
+      },
+      {
+        id: 2.2,
+        name: "Terms & Conditions",
+        link: "/terms-conditions",
+      },
+      {
+        id: 2.3,
+        name: "Partners",
+        link: "/partners" || "/",
+      },
+    ],
+  },
+];

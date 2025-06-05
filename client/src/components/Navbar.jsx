@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { StyledStack } from "./styled-components/navStyled";
 import Search from "./Search";
 import Cart from "./Cart";
+import { NavItems } from "../data/data";
 
 const Navbar = () => {
   const isLogin = false;
@@ -62,34 +63,16 @@ const Navbar = () => {
         Emmable
       </Typography>
       <StyledStack sx={{ display: { xs: "none", md: "flex" } }}>
-        <Link
-          to={"/home"}
-          className="link"
-          style={{ fontSize: "1.2rem", color: "#333" }}
-        >
-          Home
-        </Link>
-        <Link
-          to={"/"}
-          className="link"
-          style={{ fontSize: "1.2rem", color: "#333" }}
-        >
-          Products
-        </Link>
-        <Link
-          to={"/blogs"}
-          className="link"
-          style={{ fontSize: "1.2rem", color: "#333" }}
-        >
-          Our Blogs
-        </Link>
-        <Link
-          to={"/contact"}
-          className="link"
-          style={{ fontSize: "1.2rem", color: "#333" }}
-        >
-          Contact Us
-        </Link>
+        {NavItems.slice(0, 4).map((navItems) => (
+          <Link
+            key={navItems.id}
+            to={navItems.link}
+            className="link"
+            style={{ fontSize: "1.2rem", color: "#333" }}
+          >
+            {navItems.name}
+          </Link>
+        ))}
       </StyledStack>
 
       <StyledStack>
@@ -145,48 +128,16 @@ const Navbar = () => {
           zIndex={1300}
           bgcolor={"#fff"}
         >
-          <Link
-            to={"/help"}
-            className="link"
-            style={{ fontSize: "1.2rem", color: "#333" }}
-          >
-            Home
-          </Link>
-          <Link
-            to={"/help"}
-            className="link"
-            style={{ fontSize: "1.2rem", color: "#333" }}
-          >
-            Products
-          </Link>
-          <Link
-            to={"/help"}
-            className="link"
-            style={{ fontSize: "1.2rem", color: "#333" }}
-          >
-            Our Blogs
-          </Link>
-          <Link
-            to={"/help"}
-            className="link"
-            style={{ fontSize: "1.2rem", color: "#333" }}
-          >
-            Contact Us
-          </Link>
-          <Link
-            to={"/help"}
-            className="link"
-            style={{ fontSize: "1.2rem", color: "#333" }}
-          >
-            About Us
-          </Link>
-          <Link
-            to={"/help"}
-            className="link"
-            style={{ fontSize: "1.2rem", color: "#333" }}
-          >
-            Helps
-          </Link>
+          {NavItems.map((navItems) => (
+            <Link
+              key={navItems.id}
+              to={navItems.link}
+              className="link"
+              style={{ fontSize: "1.2rem", color: "#333" }}
+            >
+              {navItems.name}
+            </Link>
+          ))}
         </Stack>
       )}
       {activeModal === "search" && (
