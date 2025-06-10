@@ -1,7 +1,7 @@
 import { Stack, TextField, Typography } from "@mui/material";
 import { green } from "@mui/material/colors";
 import React from "react";
-import { Buttons, Buttonss } from "../../components/styled-components/Buttons";
+import { Buttonss } from "../../components/styled-components/Buttons";
 import { Link } from "react-router-dom";
 
 const Login = () => {
@@ -46,7 +46,10 @@ const Login = () => {
           marginTop={"1.5rem"}
         >
           Don't have an account?{" "}
-          <Link style={{ textDecoration: "none", color: "#6a5acd" }}>
+          <Link
+            to={"/register"}
+            style={{ textDecoration: "none", color: "#6a5acd" }}
+          >
             Create Account
           </Link>
         </Typography>
