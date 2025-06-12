@@ -1,0 +1,42 @@
+.new-arrivals .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.new-arrivals .swiper .swiper-slide {
+  /* Center slide text vertically */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* width: 300px !important; */
+  height: 400px;
+}
+.new-arrivals .swiper .swiper-slide img {
+  width: 100%;
+  height: 80%;
+}
+
+.swiper-button-prev {
+  color: #6a5acd;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;
+}
+.swiper-button-next {
+  color: #6a5acd;
+}
+
+.card-icon {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: -2rem;
+  left: -2rem;
+  gap: 0.5rem;
+}
+
+.new-arrivals .swiper .swiper-slide:hover .card-icon {
+  bottom: 7rem;
+  left: 7rem;
+}

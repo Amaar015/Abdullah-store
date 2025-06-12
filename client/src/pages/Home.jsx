@@ -1,12 +1,15 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Typography } from "@mui/material";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
+import "./Home-styles/Home.css";
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
+import { bannerText } from "../data/data";
+import NewArrivals from "../components/Home/NewArrivals";
 
 const Home = () => {
   return (
@@ -14,7 +17,9 @@ const Home = () => {
       <Swiper
         pagination={{
           dynamicBullets: true,
+          clickable: true,
         }}
+        // loop={true}
         autoplay={{
           delay: 4500,
           disableOnInteraction: false,
@@ -22,16 +27,19 @@ const Home = () => {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        {bannerText.map((text) => (
+          <SwiperSlide key={text.id} className="hero-slider">
+            <div>
+              <h1 className="banner-title">{text.title} </h1>
+              <span className="banner-off">{text.off}</span>
+              <button className="shop-now">
+                Shop Now <ArrowForwardIcon />
+              </button>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
+      <NewArrivals />
     </>
   );
 };
