@@ -1,7 +1,7 @@
 import { IconButton, Stack, Typography } from "@mui/material";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import men from "../../assets/men-suits-4.webp";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./Home.css";
@@ -10,6 +10,7 @@ import { recentSearch } from "../../data/data";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 const NewArrivals = () => {
   return (
@@ -48,7 +49,7 @@ const NewArrivals = () => {
           className="mySwiper"
         >
           {recentSearch.map((data) => (
-            <SwiperSlide key={data.key}>
+            <SwiperSlide key={data.key} className="card">
               <div className="card-icon">
                 <IconButton
                   sx={{
@@ -111,7 +112,41 @@ const NewArrivals = () => {
       </Stack>
       <Stack
         padding={{ xs: "2rem 1rem", sm: "2rem 2rem", md: "2rem 4rem" }}
-      ></Stack>
+        display={"flex"}
+        gap={"1.5rem"}
+        flexDirection={"row"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        flexWrap={"wrap"}
+      >
+        <div className="categories">
+          <img src={men} alt="" />
+          <div className="category-name">
+            <span>Man</span>
+            <button className="shop-now">
+              Shop now <ArrowForwardIcon />
+            </button>
+          </div>
+        </div>
+        <div className="categories">
+          <img src={men} alt="" />
+          <div className="category-name">
+            <span>Women</span>
+            <button className="shop-now">
+              Shop now <ArrowForwardIcon />
+            </button>
+          </div>
+        </div>
+        <div className="categories">
+          <img src={men} alt="" />
+          <div className="category-name">
+            <span>Kids</span>
+            <button className="shop-now">
+              Shop now <ArrowForwardIcon />
+            </button>
+          </div>
+        </div>
+      </Stack>
     </Stack>
   );
 };

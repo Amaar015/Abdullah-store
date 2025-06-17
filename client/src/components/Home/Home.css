@@ -3,15 +3,16 @@
   height: 100%;
 }
 
-.new-arrivals .swiper .swiper-slide {
+.card {
   /* Center slide text vertically */
   position: relative;
   display: flex;
   flex-direction: column;
   /* width: 300px !important; */
   height: 400px;
+  overflow: hidden;
 }
-.new-arrivals .swiper .swiper-slide img {
+.card img {
   width: 100%;
   height: 80%;
 }
@@ -27,7 +28,7 @@
   color: #6a5acd;
 }
 
-.card-icon {
+.card .card-icon {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -36,7 +37,58 @@
   gap: 0.5rem;
 }
 
-.new-arrivals .swiper .swiper-slide:hover .card-icon {
+.card:hover .card-icon {
   bottom: 7rem;
   left: 7rem;
+}
+
+.categories {
+  width: 400px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.categories img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.categories .category-name {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 2rem;
+}
+.categories .category-name span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fafafa;
+}
+.categories .category-name .shop-now {
+  display: none;
+}
+
+.categories:hover .category-name .shop-now {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .categories {
+    width: 330px;
+  }
+}
+
+@media (max-width: 400px) {
+  .categories {
+    width: 270px;
+  }
+}
+
+/* Top Sellers */
+.top-sellers .card {
+  width: 270px;
 }

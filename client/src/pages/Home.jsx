@@ -10,6 +10,9 @@ import "./Home-styles/Home.css";
 import { Autoplay, Pagination } from "swiper/modules";
 import { bannerText } from "../data/data";
 import NewArrivals from "../components/Home/NewArrivals";
+import Winterbanner from "../components/Home/Winterbanner";
+import TopSelles from "../components/Home/TopSelles";
+import Customer from "../components/Home/Customer";
 
 const Home = () => {
   return (
@@ -40,6 +43,9 @@ const Home = () => {
         ))}
       </Swiper>
       <NewArrivals />
+      <Winterbanner />
+      <TopSelles />
+      <Customer />
     </>
   );
 };

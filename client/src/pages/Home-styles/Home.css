@@ -115,3 +115,47 @@
     font-size: 1rem;
   }
 }
+
+/* Winter Banner  */
+
+.winter-banner {
+  height: 70vh;
+  background: url("https://cdn.pixabay.com/photo/2019/12/18/19/23/christmas-4704707_1280.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.winter-banner .winter-banner-text {
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 0rem 4rem 0rem 0rem;
+}
+
+.winter-banner-text h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+.winter-banner-text p {
+  width: 55%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .winter-banner .winter-banner-text {
+    padding: 0rem 1rem 0rem 0rem;
+  }
+
+  .winter-banner-text h1 {
+    font-size: 2rem;
+  }
+  .winter-banner-text p {
+    width: 80%;
+  }
+}
