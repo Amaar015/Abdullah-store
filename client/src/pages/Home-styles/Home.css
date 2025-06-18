@@ -159,3 +159,22 @@
     width: 80%;
   }
 }
+
+.testimonial {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 280px;
+  margin-top: 4rem;
+  background: #ffffff;
+}
+.testimonial img {
+  position: absolute;
+  top: -3rem;
+  left: auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}

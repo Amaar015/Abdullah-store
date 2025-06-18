@@ -13,6 +13,7 @@ import NewArrivals from "../components/Home/NewArrivals";
 import Winterbanner from "../components/Home/Winterbanner";
 import TopSelles from "../components/Home/TopSelles";
 import Customer from "../components/Home/Customer";
+import Support from "../components/Home/Support";
 
 const Home = () => {
   return (
@@ -46,6 +47,7 @@ const Home = () => {
       <Winterbanner />
       <TopSelles />
       <Customer />
+      <Support />
     </>
   );
 };

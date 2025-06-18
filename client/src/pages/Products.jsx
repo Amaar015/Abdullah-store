@@ -1,10 +1,13 @@
 import React from "react";
+import Header from "../components/Product/Header";
+import Product from "../components/Product/Product";
 
 const Products = () => {
   return (
-    <div>
-      <div>Products</div>
-    </div>
+    <>
+      <Header />
+      <Product />
+    </>
   );
 };
 

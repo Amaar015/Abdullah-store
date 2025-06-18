@@ -1,16 +1,75 @@
+export const departments = [
+  { id: 1, title: "Mens", totalCount: 200 },
+  { id: 2, title: "Kids", totalCount: 100 },
+  { id: 3, title: "Womens", totalCount: 150 },
+];
+export const category = [
+  { id: 1, title: "Tees", totalCount: 80 },
+  { id: 2, title: "Accessories", totalCount: 5 },
+  { id: 3, title: "Polos", totalCount: 20 },
+  { id: 4, title: "Sweetshirts", totalCount: 10 },
+  { id: 5, title: "Pants", totalCount: 30 },
+  { id: 6, title: "Jackets", totalCount: 60 },
+  { id: 7, title: "Sweater", totalCount: 40 },
+  { id: 8, title: "Shorts", totalCount: 20 },
+  { id: 9, title: "Swimwear", totalCount: 30 },
+  { id: 10, title: "Casual Shirt", totalCount: 10 },
+];
+export const size = ["XXS", "XS", "S", "M", "L", "XL", "XXL", "XXXL"];
+export const colors = [
+  "black",
+  "blue",
+  "white",
+  "purple",
+  "red",
+  "green",
+  "pink",
+  "gray",
+  "brown",
+];
+export const PriceRange = [
+  {
+    id: 1,
+    minPrice: 0,
+    maxPrice: 49,
+  },
+  {
+    id: 2,
+    minPrice: 50,
+    maxPrice: 100,
+  },
+  {
+    id: 3,
+    minPrice: 101,
+    maxPrice: 149,
+  },
+  {
+    id: 4,
+    minPrice: 150,
+    maxPrice: 200,
+  },
+  {
+    id: 5,
+    minPrice: 201,
+    // maxPrice: "Up",
+  },
+];
 export const recentSearch = [
   {
     id: 1,
     name: "Man in Green Zip Up Jacket",
-    price: 85.0,
-    category: "Man",
+    price: 85.8,
+    department: "Man",
+    colors: "brown",
+    size: "M",
+    category: "Jackets",
     image: "https://m.media-amazon.com/images/I/61W6FfnUXgL._AC_UY1000_.jpg",
     inCart: true,
   },
   {
     id: 2,
     name: "ST Leather Handbag",
-    price: 19.8,
+    price: 19.88,
     category: "Woman",
     image:
       "https://m.media-amazon.com/images/I/41PINc-kuxL._AC_QL92_SH45_UL240_SR240,220_.jpg",
@@ -19,7 +78,7 @@ export const recentSearch = [
   {
     id: 3,
     name: "Running Mens Sport",
-    price: 98.0,
+    price: 98.9,
     category: "Man",
     image:
       "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
@@ -28,7 +87,7 @@ export const recentSearch = [
   {
     id: 4,
     name: "Leather Sneakers",
-    price: 50.0,
+    price: 50.4,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
     inCart: true,
@@ -36,7 +95,7 @@ export const recentSearch = [
   {
     id: 5,
     name: "Woman Brown Outher",
-    price: 30.0,
+    price: 30.2,
     category: "Woman",
     image:
       "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
@@ -45,7 +104,7 @@ export const recentSearch = [
   {
     id: 6,
     name: "Mens Otis Sport Polo",
-    price: 20.0,
+    price: 20.1,
     category: "Man",
     image:
       "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
@@ -54,7 +113,7 @@ export const recentSearch = [
   {
     id: 7,
     name: "Running Mens Sport",
-    price: 98.0,
+    price: 98.3,
     category: "Man",
     image:
       "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
@@ -63,7 +122,7 @@ export const recentSearch = [
   {
     id: 8,
     name: "Leather Sneakers",
-    price: 50.0,
+    price: 50.93,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
     inCart: true,
@@ -71,7 +130,7 @@ export const recentSearch = [
   {
     id: 9,
     name: "Woman Brown Outher",
-    price: 30.0,
+    price: 30.02,
     category: "Woman",
     image:
       "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
@@ -80,11 +139,57 @@ export const recentSearch = [
   {
     id: 10,
     name: "Mens Otis Sport Polo",
-    price: 20.0,
+    price: 20.2,
     category: "Man",
     image:
       "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
     inCart: true,
+  },
+  {
+    id: 11,
+    name: "Man in Green Zip Up Jacket",
+    price: 85.1,
+    department: "Man",
+    colors: "brown",
+    size: "M",
+    category: "Jackets",
+    image: "https://m.media-amazon.com/images/I/61W6FfnUXgL._AC_UY1000_.jpg",
+    inCart: true,
+  },
+  {
+    id: 12,
+    name: "ST Leather Handbag",
+    price: 19.48,
+    category: "Woman",
+    image:
+      "https://m.media-amazon.com/images/I/41PINc-kuxL._AC_QL92_SH45_UL240_SR240,220_.jpg",
+    inCart: true,
+  },
+  {
+    id: 13,
+    name: "Running Mens Sport",
+    price: 98.5,
+    category: "Man",
+    image:
+      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
+    inCart: false,
+  },
+  {
+    id: 14,
+    name: "Leather Sneakers",
+    price: 50.6,
+    category: "Man",
+    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    inCart: true,
+  },
+  {
+    id: 15,
+    name: "Woman Brown Outher",
+    price: 30.75,
+    category: "Woman",
+    image:
+      "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
+    inCart: false,
   },
 ];
 
@@ -232,5 +337,62 @@ export const bannerText = [
     id: 5,
     title: "Big Savings Await!",
     off: "Up to 70% OFF – Limited Time Only",
+  },
+];
+
+export const Testimonial = [
+  {
+    id: 1,
+    name: "Ali Haider",
+    comment:
+      "Absolutely love this furniture! The design is modern yet timeless, and the build quality is solid and durable. It fits perfectly in my space and adds a touch of elegance.",
+    ratting: 4.4,
+    image:
+      "https://img.freepik.com/free-photo/expressive-bearded-man-wearing-shirt_273609-5894.jpg",
+  },
+  {
+    id: 2,
+    name: "Aijaz Ali",
+    comment:
+      "The fabric is super soft and breathable — perfect for everyday wear. The fit is exactly as described and doesn’t shrink after washing. I’ve already ordered two more in different colors!",
+    ratting: 4.8,
+    image:
+      "https://static.vecteezy.com/system/resources/previews/024/183/525/non_2x/avatar-of-a-man-portrait-of-a-young-guy-illustration-of-male-character-in-modern-color-style-vector.jpg",
+  },
+  {
+    id: 3,
+    name: "Shahbaz Ali",
+    comment:
+      "Stylish, comfortable, and true to size! These sneakers go well with almost everything. Great grip and cushioning — perfect for long walks or casual outings",
+    ratting: 4.8,
+    image:
+      "https://i.pinimg.com/1200x/d3/7b/02/d37b020e87945ad7f245e48df752ed03.jpg",
+  },
+  {
+    id: 4,
+    name: "Minhal Mehdi",
+    comment:
+      "The jacket is exactly what I was looking for — sleek, warm, and rugged. The leather feels genuine and smells amazing. Great attention to detail and fits like a glove!",
+    ratting: 2.5,
+    image:
+      "https://st5.depositphotos.com/72897924/61860/i/450/depositphotos_618606094-stock-photo-close-handsome-adult-man-beard.jpg",
+  },
+  {
+    id: 5,
+    name: "Wajeeha Batool",
+    comment:
+      "Very impressed with the quality! The stitching is neat, and the material feels premium. It’s comfortable to wear all day and looks sharp for both office and events.",
+    ratting: 4.5,
+    image:
+      "https://static.vecteezy.com/system/resources/thumbnails/004/899/680/small_2x/beautiful-blonde-woman-with-makeup-avatar-for-a-beauty-salon-illustration-in-the-cartoon-style-vector.jpg",
+  },
+  {
+    id: 6,
+    name: "Zaki Raza",
+    comment:
+      "Super warm and lightweight! This jacket kept me comfortable even in chilly weather. Plus, the design is modern and versatile. Worth every penny!",
+    ratting: 3.6,
+    image:
+      "https://i.pinimg.com/1200x/d3/7b/02/d37b020e87945ad7f245e48df752ed03.jpg",
   },
 ];

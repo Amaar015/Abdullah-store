@@ -121,7 +121,7 @@ const Navbar = () => {
       </StyledStack>
       {activeModal === "nav" && (
         <Stack
-          height={"70%"}
+          height={"250px"}
           width={{ xs: "250px", sm: "300px" }}
           boxShadow="rgba(149, 157, 165, 0.2) 0px 8px 24px"
           position={"absolute"}
