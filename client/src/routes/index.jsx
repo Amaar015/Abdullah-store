@@ -3,11 +3,11 @@ import Loading from "../components/Loading";
 import { Navigate, useRoutes } from "react-router-dom";
 import Home from "../pages/Home";
 import Conatact from "../pages/Conatact";
-import Blog from "../pages/Blog";
-import Blogdetails from "../sections/Blog/Blogdetails";
 import Products from "../pages/Products";
 import Login from "../pages/Auth/Login";
 import Register from "../pages/Auth/Register";
+import Collection from "../pages/Collection";
+import Collectiondetails from "../sections/Blog/Collectiondetails";
 
 const Loadable = (Component) => (props) => {
   return (
@@ -26,8 +26,8 @@ export default function Router() {
         { element: <Navigate to={"home"} replace />, index: true },
         { path: "home", element: <Home /> },
         { path: "contact", element: <Conatact /> },
-        { path: "blogs", element: <Blog /> },
-        { path: "blogs/:id", element: <Blogdetails /> },
+        { path: "collections", element: <Collection /> },
+        { path: "collection/:id", element: <Collectiondetails /> },
         { path: "products", element: <Products /> },
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },

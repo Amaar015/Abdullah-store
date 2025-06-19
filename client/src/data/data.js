@@ -191,6 +191,137 @@ export const recentSearch = [
       "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
     inCart: false,
   },
+  {
+    id: 16,
+    name: "Man in Green Zip Up Jacket",
+    price: 85.8,
+    department: "Man",
+    colors: "brown",
+    size: "M",
+    category: "Jackets",
+    image: "https://m.media-amazon.com/images/I/61W6FfnUXgL._AC_UY1000_.jpg",
+    inCart: true,
+  },
+  {
+    id: 17,
+    name: "ST Leather Handbag",
+    price: 19.88,
+    category: "Woman",
+    image:
+      "https://m.media-amazon.com/images/I/41PINc-kuxL._AC_QL92_SH45_UL240_SR240,220_.jpg",
+    inCart: true,
+  },
+  {
+    id: 18,
+    name: "Running Mens Sport",
+    price: 98.9,
+    category: "Man",
+    image:
+      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
+    inCart: false,
+  },
+  {
+    id: 19,
+    name: "Leather Sneakers",
+    price: 50.4,
+    category: "Man",
+    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    inCart: true,
+  },
+  {
+    id: 20,
+    name: "Woman Brown Outher",
+    price: 30.2,
+    category: "Woman",
+    image:
+      "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
+    inCart: false,
+  },
+  {
+    id: 21,
+    name: "Mens Otis Sport Polo",
+    price: 20.1,
+    category: "Man",
+    image:
+      "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
+    inCart: true,
+  },
+  {
+    id: 22,
+    name: "Running Mens Sport",
+    price: 98.3,
+    category: "Man",
+    image:
+      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
+    inCart: false,
+  },
+  {
+    id: 23,
+    name: "Leather Sneakers",
+    price: 50.93,
+    category: "Man",
+    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    inCart: true,
+  },
+  {
+    id: 24,
+    name: "Leather Sneakers",
+    price: 50.93,
+    category: "Man",
+    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    inCart: true,
+  },
+  {
+    id: 25,
+    name: "Leather Sneakers",
+    price: 50.4,
+    category: "Man",
+    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    inCart: true,
+  },
+  {
+    id: 26,
+    name: "Woman Brown Outher",
+    price: 30.2,
+    category: "Woman",
+    image:
+      "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
+    inCart: false,
+  },
+  {
+    id: 27,
+    name: "Mens Otis Sport Polo",
+    price: 20.1,
+    category: "Man",
+    image:
+      "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
+    inCart: true,
+  },
+  {
+    id: 28,
+    name: "Running Mens Sport",
+    price: 98.3,
+    category: "Man",
+    image:
+      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
+    inCart: false,
+  },
+  {
+    id: 29,
+    name: "Leather Sneakers",
+    price: 50.93,
+    category: "Man",
+    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    inCart: true,
+  },
+  {
+    id: 30,
+    name: "Leather Sneakers",
+    price: 50.93,
+    category: "Man",
+    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    inCart: true,
+  },
 ];
 
 export const NavItems = [
@@ -206,8 +337,8 @@ export const NavItems = [
   },
   {
     id: 3,
-    name: "Our Blogs",
-    link: "/blogs",
+    name: "Collections",
+    link: "/collections",
   },
   {
     id: 4,
@@ -394,5 +525,89 @@ export const Testimonial = [
     ratting: 3.6,
     image:
       "https://i.pinimg.com/1200x/d3/7b/02/d37b020e87945ad7f245e48df752ed03.jpg",
+  },
+];
+
+export const PickUp = [
+  {
+    id: 1,
+    title: "Emmable Karachi",
+    decription:
+      "Elegant, durable furniture enhancing comfort, style, and modern living spaces",
+    image: "https://i.dawn.com/primary/2020/08/5f4181a469138.jpg",
+    operation_hours: "10:00-22.00WB",
+    visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
+  },
+  {
+    id: 2,
+    title: "Emmable Islamabad",
+    decription:
+      "Elegant, durable furniture enhancing comfort, style, and modern living spaces",
+    image: "https://towers.pk/wp-content/uploads/2023/07/islamabad-tower.jpg",
+    operation_hours: "10:00-22.00WB",
+    visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
+  },
+  {
+    id: 3,
+    title: "Emmable Quetta",
+    decription:
+      "Elegant, durable furniture enhancing comfort, style, and modern living spaces",
+    image: "https://i.dawn.com/primary/2020/08/5f4181a469138.jpg",
+    operation_hours: "10:00-22.00WB",
+    visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
+  },
+  {
+    id: 4,
+    title: "Emmable Hyderabad",
+    decription:
+      "Elegant, durable furniture enhancing comfort, style, and modern living spaces",
+    image: "https://i.dawn.com/primary/2020/08/5f4181a469138.jpg",
+    operation_hours: "10:00-22.00WB",
+    visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
+  },
+  {
+    id: 5,
+    title: "Emmable Karachi",
+    decription:
+      "Elegant, durable furniture enhancing comfort, style, and modern living spaces",
+    image: "https://towers.pk/wp-content/uploads/2023/07/islamabad-tower.jpg",
+    operation_hours: "10:00-22.00WB",
+    visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
+  },
+  {
+    id: 6,
+    title: "Emmable Hyderabad",
+    decription:
+      "Elegant, durable furniture enhancing comfort, style, and modern living spaces",
+    image: "https://i.dawn.com/primary/2020/08/5f4181a469138.jpg",
+    operation_hours: "10:00-22.00WB",
+    visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
+  },
+  {
+    id: 7,
+    title: "Emmable Sialkot",
+    decription:
+      "Elegant, durable furniture enhancing comfort, style, and modern living spaces",
+    image: "https://i.dawn.com/primary/2020/08/5f4181a469138.jpg",
+    operation_hours: "10:00-22.00WB",
+    visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
+  },
+  {
+    id: 8,
+    title: "Emmable Rawapindi",
+    decription:
+      "Elegant, durable furniture enhancing comfort, style, and modern living spaces",
+    image: "https://i.dawn.com/primary/2020/08/5f4181a469138.jpg",
+    operation_hours: "10:00-22.00WB",
+    visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
+  },
+  {
+    id: 9,
+    title: "Emmable Larkana",
+    decription:
+      "Elegant, durable furniture enhancing comfort, style, and modern living spaces",
+    image: "https://i.dawn.com/primary/2020/08/5f4181a469138.jpg",
+    operation_hours: "10:00-22.00WB",
+    visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
   },
 ];
