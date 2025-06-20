@@ -5,7 +5,9 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import { useNavigate } from "react-router-dom";
 const TopSelles = () => {
+  const navigate = useNavigate();
   return (
     <Stack padding={{ xs: "3rem 1rem", sm: "3rem 2rem", md: "3rem 4rem" }}>
       <Typography
@@ -35,7 +37,12 @@ const TopSelles = () => {
         className="top-sellers"
       >
         {recentSearch.slice(0, 8).map((data) => (
-          <div className="card">
+          <Stack
+            className="card"
+            onClick={() => {
+              navigate(`/card-detail/${data.id}`);
+            }}
+          >
             <div className="card-icon">
               <IconButton
                 sx={{
@@ -88,7 +95,7 @@ const TopSelles = () => {
                 ${data.price}
               </Typography>
             </Stack>
-          </div>
+          </Stack>
         ))}
       </Stack>
     </Stack>

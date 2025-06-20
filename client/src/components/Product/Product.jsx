@@ -23,10 +23,11 @@ import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import { DrawerContent } from "./Drawer";
 import { usePagination } from "../../hooks/Pagination";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 // import {  toggleDrawer } from "./Drawer";
 const Product = () => {
   const [open, setOpen] = useState(false);
-
+  const navigate = useNavigate();
   const [
     totalPages,
     startPageIndex,
@@ -34,13 +35,7 @@ const Product = () => {
     currentPageIndex,
     displayPage,
   ] = usePagination(15, recentSearch.length);
-  const handleReset = () => {
-    setSelectedDepartment("");
-    setSelectedCategory("");
-    setSelectedSize("");
-    setselectedColor("");
-    setSelectedRanges("");
-  };
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 900) {
@@ -68,11 +63,7 @@ const Product = () => {
     >
       {/* Fillter section */}
       <Stack display={{ xs: "none", md: "inline" }} width={"25%"}>
-        <DrawerContent
-          width={"100%"}
-          handleReset={handleReset}
-          onCloseDrawer={() => setOpen(false)}
-        />
+        <DrawerContent width={"100%"} onCloseDrawer={() => setOpen(false)} />
       </Stack>
       {/* Product section */}
       <Stack
@@ -133,7 +124,12 @@ const Product = () => {
                   transition={{ duration: 1, ease: "easeOut" }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-                  <div className="card">
+                  <Stack
+                    className="card"
+                    onClick={() => {
+                      navigate(`/card-detail/${data.id}`);
+                    }}
+                  >
                     <div className="card-icon">
                       <IconButton
                         sx={{
@@ -192,7 +188,7 @@ const Product = () => {
                         ${data.price}
                       </Typography>
                     </Stack>
-                  </div>
+                  </Stack>
                 </motion.div>
               );
             }
@@ -204,15 +200,16 @@ const Product = () => {
             style={{ marginTop: "2rem" }}
             sx={{
               "& .MuiPaginationItem-root": {
-                color: "#5ea51d",
-                borderColor: "#5ea51d",
+                color: "#6a5acd",
+                borderColor: "#6a5acd",
               },
               "& .Mui-selected": {
-                backgroundColor: "#5ea51d !important",
+                backgroundColor: "#6a5acd !important",
                 color: "#fff !important",
               },
               "& .MuiPaginationItem-root:hover": {
-                backgroundColor: "#4d8f1a",
+                backgroundColor: "#6a5acd",
+                color: "#fff",
               },
             }}
             count={totalPages}

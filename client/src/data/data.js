@@ -88,8 +88,34 @@ export const recentSearch = [
     id: 4,
     name: "Leather Sneakers",
     price: 50.4,
+    price_before: 100.08,
+    quantity: 10,
     category: "Man",
+    variety: "Shoes",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    images: [
+      "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+      "https://eu.velasca.com/cdn/shop/files/01_beleratt_m_grande.jpg?v=1708422426",
+      "https://paulevansny.com/cdn/shop/files/SmithBrown41200x1500_2048x.jpg?v=1686675658",
+      "https://olukai.com/cdn/shop/files/10455_KNKN_101_aaed93a5-f8e7-49d9-bb0d-b2ec76e9e5f7.jpg?v=1736437238",
+    ],
+    size: [5, 6, 7, 8, 9, 10],
+    color: ["black", "white", "brown"],
+    description:
+      "Leather sneakers are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: true,
   },
   {

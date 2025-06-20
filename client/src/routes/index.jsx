@@ -9,6 +9,7 @@ import Register from "../pages/Auth/Register";
 import Collection from "../pages/Collection";
 import Collectiondetails from "../sections/Blog/Collectiondetails";
 import Error from "../pages/Error";
+import CardDetails from "../features/CardDetails";
 
 const Loadable = (Component) => (props) => {
   return (
@@ -30,6 +31,7 @@ export default function Router() {
         { path: "collections", element: <Collection /> },
         { path: "collection/:id", element: <Collectiondetails /> },
         { path: "products", element: <Products /> },
+        { path: "card-detail/:id", element: <CardDetails /> },
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },
         { path: "*", element: <Error /> },

@@ -17,7 +17,8 @@
   border: 2px solid #6a5acd;
 }
 
-.btn2 {
+.btn2,
+.quantity-button {
   width: 100%;
   background: #6a5acd;
   height: 40px;
@@ -30,7 +31,11 @@
   border: 2px solid #6a5acd;
   transition: all 0.3s ease-in-out;
 }
-.btn2:hover {
+.quantity-button {
+  height: 55px;
+}
+.btn2:hover,
+.quantity-button:hover {
   background: #5d4fb6fd;
   color: #fafafa;
 }

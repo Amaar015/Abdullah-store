@@ -57,6 +57,7 @@
   /* width: 300px !important; */
   height: 400px;
   overflow: hidden;
+  cursor: pointer;
 }
 .card img {
   width: 100%;
@@ -78,6 +79,13 @@
 .product-card .card {
   width: 270px;
 }
+/* Detail Image */
+.card-detail-image {
+  width: 45%;
+  height: 330px;
+  object-fit: cover;
+}
+
 @media (max-width: 900px) {
   .product-card .card {
     width: 250px;
@@ -104,6 +112,11 @@
     height: 250px;
     object-fit: contain;
   }
+  .card-detail-image {
+    width: 80%;
+    height: 330px;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 340px) {
@@ -112,4 +125,45 @@
     height: 200px;
     object-fit: contain;
   }
+}
+
+/* Size Color button */
+
+.size-btn {
+  height: 40px;
+  width: 60px;
+  font-size: 1rem;
+  border: 1px solid #888;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+.color-btn {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 3px solid #111;
+}
+.size-btn:hover,
+.selected,
+.selected-color {
+  border: 3px solid #6a5acd;
+  scale: 1.1;
+}
+
+/* quantity button */
+.quantity-btn {
+  padding: 0.5rem 0rem;
+  width: 45px;
+  font-size: 18px;
+  cursor: pointer;
+  background: transparent;
+}
+.quantity-btn:nth-child(1) {
+  border-right: 1px solid #d1d5db;
+}
+.quantity-btn:nth-child(3) {
+  border-left: 1px solid #d1d5db;
 }

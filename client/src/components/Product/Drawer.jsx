@@ -9,7 +9,7 @@ import {
 } from "../../data/data";
 import "./style.css";
 import { Buttons, Buttonss } from "../styled-components/Buttons";
-export const DrawerContent = ({ onCloseDrawer, handleReset, width }) => {
+export const DrawerContent = ({ onCloseDrawer, width }) => {
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedSize, setSelectedSize] = useState("");
@@ -32,6 +32,13 @@ export const DrawerContent = ({ onCloseDrawer, handleReset, width }) => {
     setSelectedCategory(event.target.value);
   };
 
+  const handleReset = () => {
+    setSelectedDepartment("");
+    setSelectedCategory("");
+    setSelectedSize("");
+    setselectedColor("");
+    setSelectedRanges("");
+  };
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 900) {

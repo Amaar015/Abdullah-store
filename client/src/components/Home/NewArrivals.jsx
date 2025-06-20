@@ -12,7 +12,9 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import { useNavigate } from "react-router-dom";
 const NewArrivals = () => {
+  const navigate = useNavigate();
   return (
     <Stack height={"100%"} width={"100%"} padding={"4rem 0rem 2rem 0rem"}>
       <Typography
@@ -49,7 +51,13 @@ const NewArrivals = () => {
           className="mySwiper"
         >
           {recentSearch.map((data) => (
-            <SwiperSlide key={data.key} className="card">
+            <SwiperSlide
+              key={data.id}
+              className="card"
+              onClick={() => {
+                navigate(`/card-detail/${data.id}`);
+              }}
+            >
               <div className="card-icon">
                 <IconButton
                   sx={{
