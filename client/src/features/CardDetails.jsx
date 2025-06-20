@@ -6,6 +6,7 @@ import "../components/styled-components/Style.css";
 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import HomeIcon from "@mui/icons-material/Home";
+import Comments from "../sections/Comments";
 const CardDetails = () => {
   const product = recentSearch.find((item) => item.id === 4);
   const [selectedSize, setSelectedSize] = useState("");
@@ -217,7 +218,17 @@ const CardDetails = () => {
             </Stack>
           </Stack>
         </Stack>
+        <Divider
+          sx={{
+            height: "1px",
+            bgcolor: "#D1D5DB",
+            width: "90%",
+          }}
+        />
       </Stack>
+
+      {/* Comments */}
+      <Comments />
     </>
   );
 };

@@ -86,7 +86,7 @@ const Customer = () => {
 
 export default Customer;
 
-const StarRating = ({ ratting }) => {
+export const StarRating = ({ ratting }) => {
   const fullStars = Math.floor(ratting);
   const halfStar = ratting % 1 >= 0.5;
   const stars = [];

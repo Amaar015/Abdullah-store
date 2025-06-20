@@ -637,3 +637,195 @@ export const PickUp = [
     visit: "https://maps.app.goo.gl/UtDNUrdkfGHdqtJJ8",
   },
 ];
+
+export const Comment = [
+  {
+    id: 1,
+    name: "Vincent Burgess",
+    data: "30 jult 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 2,
+    name: "Ali Hamza",
+    data: "15 jun 2025",
+    rating: 4,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 10,
+  },
+  {
+    id: 3,
+    name: "Mohammad Essa",
+    data: "20 may 2025",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 4,
+    name: "Ali Haider",
+    data: "10 july 2024",
+    rating: 3,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 5,
+    name: "Abdul Kareem",
+    data: "25 july 2023",
+    rating: 4,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 6,
+    name: "Wajeeha Batool",
+    data: "04 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 7,
+    name: "Mohammad Hussain",
+    data: "15 march 2025",
+    rating: 4,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 8,
+    name: "Azadar Raza",
+    data: "12 Dec 2023",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 9,
+    name: "Khuran Khoso",
+    data: "24 Dec 2024",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 10,
+    name: "Ali Shanawar",
+    data: "14 jan 2025",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 11,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 12,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 13,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 14,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 15,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 16,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 17,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 18,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 19,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 20,
+    name: "Vincent Burgess",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+  {
+    id: 21,
+    name: "Amaar Raza",
+    data: "30 july 2022",
+    rating: 5,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    likes: 15,
+  },
+];
