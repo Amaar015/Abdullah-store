@@ -1,19 +1,25 @@
 import {
   Avatar,
   Divider,
-  Grid,
-  Input,
+  IconButton,
   Slider,
   Stack,
-  styled,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
 import { Comment } from "../data/data";
 import { StarRating } from "../components/Home/Customer";
 
+import { useNavigate } from "react-router-dom";
+import Review from "../modals/Review";
+import Likes from "../features/Likes";
+
 const Comments = () => {
+  const navigate = useNavigate();
   const [visibleCount, setVisibleCount] = useState(5);
+  const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
   const handleLoadmore = () => {
     setVisibleCount((prevCount) => prevCount + 5);
   };
@@ -24,20 +30,9 @@ const Comments = () => {
     setValue(newValue);
   };
 
-  const handleInputChange = (event) => {
-    setValue(event.target.value === "" ? 0 : Number(event.target.value));
-  };
-
-  const handleBlur = () => {
-    if (value < 0) {
-      setValue(0);
-    } else if (value > 30) {
-      setValue(30);
-    }
-  };
   return (
-    <Stack padding={{ xs: "1rem", sm: "1rem 2rem", md: "1rem 4.5rem" }}>
-      <Typography fontSize={"2rem"} fontWeight={"bold"}>
+    <Stack padding={{ xs: "1rem", sm: "1rem 2rem", md: "1rem 3rem" }}>
+      <Typography fontSize={{ xs: "1.5rem", sm: "2rem" }} fontWeight={"bold"}>
         Customer Reviews (34)
       </Typography>
       <Stack
@@ -49,11 +44,11 @@ const Comments = () => {
         gap={"2rem"}
         padding={"2rem 0rem"}
       >
-        <Stack width={{ xs: "95%", sm: "80%", md: "46%" }}>
+        <Stack width={{ xs: "100%", sm: "100%", md: "46%" }}>
           {comments.map((data) => (
             <>
               <Stack
-                direction={"row"}
+                direction={{ xs: "column", sm: "row" }}
                 display={"flex"}
                 gap={"1rem"}
                 padding={"1rem"}
@@ -63,7 +58,7 @@ const Comments = () => {
                   src={"/image"}
                   sx={{ width: 50, height: 50 }}
                 />
-                <Stack spacing={"0.2rem"} width={"80%"}>
+                <Stack spacing={"0.2rem"} width={{ xs: "95%", sm: "80%" }}>
                   <Stack>
                     <Typography fontSize={"16px"} fontWeight={"bold"}>
                       {data.name}
@@ -74,7 +69,10 @@ const Comments = () => {
                   </Stack>
                   <StarRating ratting={data.rating} />
                   <Typography
-                    padding={"0 2rem 0rem 0rem"}
+                    padding={{
+                      xs: "0rem 0rem 0rem 0rem",
+                      sm: "0 2rem 0rem 0rem",
+                    }}
                     fontSize={"16px"}
                     color="#666"
                   >
@@ -83,7 +81,11 @@ const Comments = () => {
                 </Stack>
               </Stack>
               <Divider
-                sx={{ height: "1px", bgcolor: "#D1D5DB", width: "90%" }}
+                sx={{
+                  height: "1px",
+                  bgcolor: "#D1D5DB",
+                  width: { xs: "100%", sm: "90%" },
+                }}
               />
             </>
           ))}
@@ -106,13 +108,13 @@ const Comments = () => {
         </Stack>
 
         <Stack
-          width={{ xs: "95%", sm: "80%", md: "46%" }}
+          width={{ xs: "100%", sm: "90%", md: "46%" }}
           boxShadow={
             "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px"
           }
           spacing={2}
-          height={"350px"}
-          padding={"2rem"}
+          height={"100%"}
+          padding={{ xs: "2rem 1rem 0rem 1rem", sm: "2rem 2rem 0rem 2rem" }}
         >
           <Typography fontSize={"16px"} fontWeight={"bold"}>
             Overall rating
@@ -144,7 +146,7 @@ const Comments = () => {
                 direction="row"
                 alignItems="center"
                 gap={2}
-                width="70%"
+                width={{ xs: "100%", sm: "70%" }}
               >
                 <Slider
                   value={27}
@@ -174,7 +176,7 @@ const Comments = () => {
                     },
                   }}
                 />
-                <Typography fontSize={"1.4rem"}>{value}</Typography>
+                <Typography fontSize={"1.4rem"}>27</Typography>
               </Stack>
             </Stack>
             <Stack direction={"row"} gap={2} alignItems={"center"}>
@@ -189,7 +191,7 @@ const Comments = () => {
                 direction="row"
                 alignItems="center"
                 gap={2}
-                width="70%"
+                width={{ xs: "100%", sm: "70%" }}
               >
                 <Slider
                   value={18}
@@ -219,7 +221,7 @@ const Comments = () => {
                     },
                   }}
                 />
-                <Typography fontSize={"1.4rem"}>{value}</Typography>
+                <Typography fontSize={"1.4rem"}>18</Typography>
               </Stack>
             </Stack>
 
@@ -235,7 +237,7 @@ const Comments = () => {
                 direction="row"
                 alignItems="center"
                 gap={2}
-                width="70%"
+                width={{ xs: "100%", sm: "70%" }}
               >
                 <Slider
                   value={10}
@@ -243,6 +245,7 @@ const Comments = () => {
                   aria-labelledby="input-slider"
                   min={0}
                   max={30}
+                  disabled
                   step={1}
                   sx={{
                     flex: 1,
@@ -264,7 +267,7 @@ const Comments = () => {
                     },
                   }}
                 />
-                <Typography fontSize={"1.4rem"}>{value}</Typography>
+                <Typography fontSize={"1.4rem"}>{10}</Typography>
               </Stack>
             </Stack>
             <Stack direction={"row"} gap={2} alignItems={"center"}>
@@ -279,18 +282,37 @@ const Comments = () => {
                 direction="row"
                 alignItems="center"
                 gap={2}
-                width="70%"
+                width={{ xs: "100%", sm: "70%" }}
               >
                 <Slider
-                  value={typeof value === "number" ? value : 0}
+                  value={0}
                   onChange={handleSliderChange}
                   aria-labelledby="input-slider"
                   min={0}
                   max={30}
+                  disabled
                   step={1}
-                  sx={{ flex: 1 }}
+                  sx={{
+                    flex: 1,
+                    color: "#6a5acd",
+                    "& .MuiSlider-thumb": {
+                      color: "#6a5acd",
+                    },
+                    "& .MuiSlider-rail": {
+                      color: "#ccc", // light grey rail
+                    },
+                    "&.Mui-disabled": {
+                      color: "#6a5acd", // main track and thumb when disabled
+                      "& .MuiSlider-thumb": {
+                        color: "#6a5acd",
+                      },
+                      "& .MuiSlider-track": {
+                        color: "#6a5acd",
+                      },
+                    },
+                  }}
                 />
-                <Typography fontSize={"1.4rem"}>{value}</Typography>
+                <Typography fontSize={"1.4rem"}>0</Typography>
               </Stack>
             </Stack>
             <Stack direction={"row"} gap={2} alignItems={"center"}>
@@ -305,23 +327,82 @@ const Comments = () => {
                 direction="row"
                 alignItems="center"
                 gap={2}
-                width="70%"
+                width={{ xs: "100%", sm: "70%" }}
               >
                 <Slider
-                  value={typeof value === "number" ? value : 0}
+                  value={0}
                   onChange={handleSliderChange}
                   aria-labelledby="input-slider"
                   min={0}
                   max={30}
                   step={1}
-                  sx={{ flex: 1 }}
+                  disabled
+                  sx={{
+                    flex: 1,
+                    color: "#6a5acd",
+                    "& .MuiSlider-thumb": {
+                      color: "#6a5acd",
+                    },
+                    "& .MuiSlider-rail": {
+                      color: "#ccc", // light grey rail
+                    },
+                    "&.Mui-disabled": {
+                      color: "#6a5acd", // main track and thumb when disabled
+                      "& .MuiSlider-thumb": {
+                        color: "#6a5acd",
+                      },
+                      "& .MuiSlider-track": {
+                        color: "#6a5acd",
+                      },
+                    },
+                  }}
                 />
-                <Typography fontSize={"1.4rem"}>{value}</Typography>
+                <Typography fontSize={"1.4rem"}>0</Typography>
               </Stack>
             </Stack>
           </Stack>
+          <Stack
+            padding={"1rem 0rem"}
+            direction={{ xs: "column", sm: "row" }}
+            display={"flex"}
+            justifyContent={"space-between"}
+            alignItems={{ xs: "start", sm: "center" }}
+          >
+            <Stack marginBottom={{ xs: "1rem" }}>
+              <Typography fontSize={"20px"} fontWeight={"bold"}>
+                Review this product
+              </Typography>
+              <Typography fontSize={"16px"} color="">
+                Share your thoughts with other customers
+              </Typography>
+            </Stack>
+            <button
+              style={{
+                width: "150px",
+                height: "40px",
+                fontSize: "16px",
+                fontWeight: "bold",
+                cursor: "pointer",
+                border: "2px solid #6a5acd",
+                background: "transparent",
+                color: "#666",
+              }}
+              onClick={handleOpen}
+            >
+              Write a review
+            </button>
+            <Review handleClose={handleClose} open={open} />
+          </Stack>
         </Stack>
       </Stack>
+      <Divider
+        sx={{
+          height: "1px",
+          bgcolor: "#D1D5DB",
+          width: { xs: "100%", sm: "90%" },
+        }}
+      />
+      <Likes />
     </Stack>
   );
 };

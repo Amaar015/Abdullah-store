@@ -8,7 +8,7 @@ export const Buttons = ({ title }) => {
 export const Buttonss = ({ title, link }) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/home");
+    navigate(link);
   };
   return (
     <button onClick={handleClick} className="btn2">

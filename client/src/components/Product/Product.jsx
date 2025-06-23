@@ -51,7 +51,13 @@ const Product = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
+  const handleReset = () => {
+    setSelectedDepartment("");
+    setSelectedCategory("");
+    setSelectedSize("");
+    setselectedColor("");
+    setSelectedRanges("");
+  };
   return (
     <Stack
       spacing={2}

@@ -49,7 +49,11 @@ const Cart = ({ open, handleClose, handleOpen }) => {
             <Typography color="#555" fontWeight={"500"} fontSize={"1.2rem"}>
               Cart ({Carts.length})
             </Typography>
-            <Link to={"/check-out"} style={{ textDecoration: "none" }}>
+            <Link
+              to={"/cart"}
+              onClick={handleClose}
+              style={{ textDecoration: "none" }}
+            >
               View Cart
             </Link>
           </Stack>
@@ -99,7 +103,7 @@ const Cart = ({ open, handleClose, handleOpen }) => {
             </Typography>
 
             <Typography color="#333" fontSize={"1rem"} fontWeight={"bold"}>
-              $ {totalPrice}
+              $ {totalPrice.toFixed(2)}
             </Typography>
           </Stack>
           <Stack alignItems={"center"}>

@@ -63,26 +63,30 @@ export const recentSearch = [
     colors: "brown",
     size: "M",
     category: "Jackets",
-    image: "https://m.media-amazon.com/images/I/61W6FfnUXgL._AC_UY1000_.jpg",
+    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
     inCart: true,
   },
   {
     id: 2,
     name: "ST Leather Handbag",
     price: 19.88,
-    category: "Woman",
+    department: "Man",
+    colors: "brown",
+    size: "M",
+
     image:
-      "https://m.media-amazon.com/images/I/41PINc-kuxL._AC_QL92_SH45_UL240_SR240,220_.jpg",
+      "https://eu.velasca.com/cdn/shop/files/01_beleratt_m_grande.jpg?v=1708422426",
     inCart: true,
   },
   {
     id: 3,
     name: "Running Mens Sport",
     price: 98.9,
-    category: "Man",
-    image:
-      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
-    inCart: false,
+    department: "Man",
+    colors: "brown",
+    size: "M",
+    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    inCart: true,
   },
   {
     id: 4,
@@ -116,7 +120,7 @@ export const recentSearch = [
 
       "Breathable inner lining",
     ],
-    inCart: true,
+    inCart: false,
   },
   {
     id: 5,
@@ -134,7 +138,7 @@ export const recentSearch = [
     category: "Man",
     image:
       "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 7,
@@ -151,7 +155,7 @@ export const recentSearch = [
     price: 50.93,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 9,
@@ -169,7 +173,7 @@ export const recentSearch = [
     category: "Man",
     image:
       "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 11,
@@ -180,7 +184,7 @@ export const recentSearch = [
     size: "M",
     category: "Jackets",
     image: "https://m.media-amazon.com/images/I/61W6FfnUXgL._AC_UY1000_.jpg",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 12,
@@ -189,7 +193,7 @@ export const recentSearch = [
     category: "Woman",
     image:
       "https://m.media-amazon.com/images/I/41PINc-kuxL._AC_QL92_SH45_UL240_SR240,220_.jpg",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 13,
@@ -206,7 +210,7 @@ export const recentSearch = [
     price: 50.6,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 15,
@@ -226,7 +230,7 @@ export const recentSearch = [
     size: "M",
     category: "Jackets",
     image: "https://m.media-amazon.com/images/I/61W6FfnUXgL._AC_UY1000_.jpg",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 17,
@@ -235,7 +239,7 @@ export const recentSearch = [
     category: "Woman",
     image:
       "https://m.media-amazon.com/images/I/41PINc-kuxL._AC_QL92_SH45_UL240_SR240,220_.jpg",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 18,
@@ -252,7 +256,7 @@ export const recentSearch = [
     price: 50.4,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 20,
@@ -270,7 +274,7 @@ export const recentSearch = [
     category: "Man",
     image:
       "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 22,
@@ -287,7 +291,7 @@ export const recentSearch = [
     price: 50.93,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 24,
@@ -295,7 +299,7 @@ export const recentSearch = [
     price: 50.93,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 25,
@@ -303,7 +307,7 @@ export const recentSearch = [
     price: 50.4,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 26,
@@ -321,7 +325,7 @@ export const recentSearch = [
     category: "Man",
     image:
       "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 28,
@@ -338,7 +342,7 @@ export const recentSearch = [
     price: 50.93,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
+    inCart: false,
   },
   {
     id: 30,
@@ -346,7 +350,7 @@ export const recentSearch = [
     price: 50.93,
     category: "Man",
     image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
+    inCart: false,
   },
 ];
 
