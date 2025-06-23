@@ -5,7 +5,9 @@ import Quantity from "../components/styled-components/Quantity";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Buttons, Buttonss } from "../components/styled-components/Buttons";
 import { useNavigate } from "react-router-dom";
-const Cart = () => {
+import Likes from "../features/Likes";
+import Ordersummary from "../features/Checkout/Ordersummary";
+const Cart = ({ handleChange }) => {
   const cartItems = recentSearch.filter((item) => item.inCart === true);
 
   const subtotal = cartItems.reduce((total, item) => {
@@ -20,15 +22,10 @@ const Cart = () => {
       direction={"row"}
       display={"flex"}
       // alignItems={"center"}
-      justifyContent={"center"}
+      justifyContent={"space-between"}
       flexWrap={"wrap"}
       gap={"2rem"}
-      // width={"100%"}
-      padding={{
-        xs: "2rem 0.5rem 4rem 0.5rem",
-        sm: "4rem 2rem",
-        md: "4rem 4rem",
-      }}
+      paddingBottom={"3rem"}
     >
       <Stack spacing={4} width={{ xs: "100%", sm: "80%", md: "50%" }}>
         {cartItems.map((item) => (
@@ -51,7 +48,10 @@ const Cart = () => {
             >
               <img src={item.image} alt={item.name} />
               <Stack spacing={2}>
-                <Typography fontSize={"1rem"} fontWeight={"bold"}>
+                <Typography
+                  fontSize={{ xs: "0.8rem", sm: "1rem" }}
+                  fontWeight={"bold"}
+                >
                   {item.name}
                 </Typography>
                 <Stack>
@@ -89,37 +89,7 @@ const Cart = () => {
           </Stack>
         ))}
       </Stack>
-      <Stack
-        width={{ xs: "100%", sm: "80%", md: "25%" }}
-        height={"100%"}
-        bgcolor={"#eee"}
-        padding={"2rem"}
-        spacing={2}
-      >
-        <Typography fontSize={"1.2rem"}>Summary</Typography>
-        <Divider sx={{ height: "1px", bgcolor: "#999" }} />
-        <Stack spacing={1} direction={"row"} justifyContent={"space-between"}>
-          <Typography>Subtotal</Typography>
-
-          <Typography>
-            {subtotal ? `${subtotal.toFixed(2)}` : "00.00"}{" "}
-          </Typography>
-        </Stack>
-        <Stack spacing={1} direction={"row"} justifyContent={"space-between"}>
-          <Typography>Tax</Typography>
-          <Typography>{false ? `${tax}` : "00.00"} </Typography>
-        </Stack>
-        <Stack spacing={1} direction={"row"} justifyContent={"space-between"}>
-          <Typography>Shipping</Typography>
-          <Typography>${shipping}</Typography>
-        </Stack>
-        <Divider sx={{ height: "1px", bgcolor: "#999" }} />
-        <Stack spacing={1} direction={"row"} justifyContent={"space-between"}>
-          <Typography>Total</Typography>
-          <Typography>{total.toFixed(2)}</Typography>
-        </Stack>
-        <Buttonss title={"Checkout"} link={"/checkout"} />
-      </Stack>
+      <Ordersummary handleChange={handleChange} />
     </Stack>
   );
 };

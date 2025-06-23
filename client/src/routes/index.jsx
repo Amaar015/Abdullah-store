@@ -11,7 +11,7 @@ import Collectiondetails from "../sections/Blog/Collectiondetails";
 import Error from "../pages/Error";
 import CardDetails from "../features/CardDetails";
 import Cart from "../pages/Cart";
-import Checkout from "../features/Checkout/Checkout";
+import Checkout from "../pages/Checkout";
 
 const Loadable = (Component) => (props) => {
   return (
@@ -36,8 +36,8 @@ export default function Router() {
         { path: "card-detail/:id", element: <CardDetails /> },
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },
-        { path: "cart", element: <Cart /> },
-        { path: "checkout", element: <Checkout /> },
+        { path: "cart", element: <Checkout /> },
+        // { path: "checkout", element: <Checkout /> },
         { path: "*", element: <Error /> },
       ],
     },

@@ -31,17 +31,7 @@ const Quantity = ({ visible }) => {
         <button className="quantity-btn" onClick={handleDecrement}>
           <RemoveIcon />
         </button>
-        <div
-          style={{
-            padding: "0.5rem 0rem",
-            width: "45px",
-            fontSize: "18px",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          {quantity}
-        </div>
+        <div className="number-quantity">{quantity}</div>
         <button className="quantity-btn" onClick={handleIncrement}>
           <AddIcon />
         </button>

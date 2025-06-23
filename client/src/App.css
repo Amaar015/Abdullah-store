@@ -159,6 +159,13 @@
 .quantity-btn:nth-child(3) {
   border-left: 1px solid #d1d5db;
 }
+.number-quantity {
+  padding: 0.5rem 0rem;
+  width: 45px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
 
 .checkout-detail img {
   width: 130px;
@@ -166,7 +173,15 @@
   object-fit: cover;
 }
 
-@media (max-width: 310px) {
+@media (max-width: 330px) {
+  .quantity-btn {
+    width: 30px;
+    font-size: 14px;
+  }
+  .number-quantity {
+    width: 30px;
+    font-size: 14px;
+  }
   .checkout-detail img {
     width: 110px;
   }
