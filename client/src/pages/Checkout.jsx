@@ -7,7 +7,7 @@ import TabPanel from "@mui/lab/TabPanel";
 import CheckIcon from "@mui/icons-material/Check";
 import { Stack } from "@mui/material";
 import Cart from "./Cart";
-import { Information } from "../features/Checkout/CheckoutComponents";
+import { Information, Shipping } from "../features/Checkout/CheckoutComponents";
 
 export default function Checkout() {
   const [value, setValue] = React.useState("1");
@@ -121,9 +121,11 @@ export default function Checkout() {
             <Cart handleChange={handleChange} />
           </TabPanel>
           <TabPanel value="2">
-            <Information />
+            <Information handleChange={handleChange} />
           </TabPanel>
-          <TabPanel value="3">Item Three Content</TabPanel>
+          <TabPanel value="3">
+            <Shipping handleChange={handleChange} />
+          </TabPanel>
         </Box>
       </TabContext>
     </Box>

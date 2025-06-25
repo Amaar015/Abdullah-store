@@ -14,8 +14,13 @@ import Winterbanner from "../components/Home/Winterbanner";
 import TopSelles from "../components/Home/TopSelles";
 import Customer from "../components/Home/Customer";
 import Support from "../components/Home/Support";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handleNaigate = () => {
+    navigate("/products");
+  };
   return (
     <>
       <Swiper
@@ -36,7 +41,7 @@ const Home = () => {
             <div>
               <h1 className="banner-title">{text.title} </h1>
               <span className="banner-off">{text.off}</span>
-              <button className="shop-now">
+              <button className="shop-now" onClick={handleNaigate}>
                 Shop Now <ArrowForwardIcon />
               </button>
             </div>

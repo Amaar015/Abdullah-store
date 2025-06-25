@@ -833,3 +833,31 @@ export const Comment = [
     likes: 15,
   },
 ];
+
+export const shipping = [
+  {
+    title: "Free Shipping",
+    delivery: "Delivery in 5-7 working days",
+    price: "Free",
+  },
+  {
+    title: "Local Pickup from store",
+    delivery: "Delivery in 1-2 working days",
+    price: "$8.00",
+  },
+  {
+    title: "Standard Shipping",
+    delivery: "Delivery in 5-7 working days",
+    price: "$11.00",
+  },
+  {
+    title: "Express Shipping",
+    delivery: "Delivery in 3-5 working days",
+    price: "$18.00",
+  },
+  {
+    title: "Same-Day Delivery",
+    delivery: "-",
+    price: "$34.00",
+  },
+];

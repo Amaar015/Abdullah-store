@@ -23,7 +23,7 @@ const CardDetails = () => {
         gap={"2rem"}
         padding={"3rem 0rem"}
       >
-        <Stack width={{ xs: "95%", sm: "80%", md: "44%" }} spacing={2}>
+        <Stack width={{ xs: "95%", sm: "80%", md: "40%" }} spacing={2}>
           <Stack
             width={"100%"}
             direction={"row"}
@@ -52,7 +52,7 @@ const CardDetails = () => {
             ))}
           </Stack>
         </Stack>
-        <Stack spacing={3} width={{ xs: "95%", sm: "80%", md: "44%" }}>
+        <Stack spacing={3} width={{ xs: "95%", sm: "80%", md: "40%" }}>
           <div>
             <Typography
               textTransform={"uppercase"}

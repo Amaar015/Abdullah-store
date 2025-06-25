@@ -81,8 +81,8 @@
 }
 /* Detail Image */
 .card-detail-image {
-  width: 45%;
-  height: 330px;
+  width: 40%;
+  height: 300px;
   object-fit: cover;
 }
 

@@ -89,7 +89,7 @@ const Cart = ({ handleChange }) => {
           </Stack>
         ))}
       </Stack>
-      <Ordersummary handleChange={handleChange} />
+      <Ordersummary handleChange={handleChange} value={"2"} />
     </Stack>
   );
 };

@@ -15,6 +15,9 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import { useNavigate } from "react-router-dom";
 const NewArrivals = () => {
   const navigate = useNavigate();
+  const handleNaigate = () => {
+    navigate("/products");
+  };
   return (
     <Stack height={"100%"} width={"100%"} padding={"4rem 0rem 2rem 0rem"}>
       <Typography
@@ -131,7 +134,7 @@ const NewArrivals = () => {
           <img src={men} alt="" />
           <div className="category-name">
             <span>Man</span>
-            <button className="shop-now">
+            <button className="shop-now" onClick={handleNaigate}>
               Shop now <ArrowForwardIcon />
             </button>
           </div>
@@ -140,7 +143,7 @@ const NewArrivals = () => {
           <img src={men} alt="" />
           <div className="category-name">
             <span>Women</span>
-            <button className="shop-now">
+            <button className="shop-now" onClick={handleNaigate}>
               Shop now <ArrowForwardIcon />
             </button>
           </div>
@@ -149,7 +152,7 @@ const NewArrivals = () => {
           <img src={men} alt="" />
           <div className="category-name">
             <span>Kids</span>
-            <button className="shop-now">
+            <button className="shop-now" onClick={handleNaigate}>
               Shop now <ArrowForwardIcon />
             </button>
           </div>

@@ -2,7 +2,7 @@ import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 import { recentSearch } from "../../data/data";
 
-const Ordersummary = ({ handleChange }) => {
+const Ordersummary = ({ handleChange, value }) => {
   const cartItems = recentSearch.filter((item) => item.inCart === true);
 
   const subtotal = cartItems.reduce((total, item) => {
@@ -13,7 +13,7 @@ const Ordersummary = ({ handleChange }) => {
   const total = subtotal + shipping;
 
   const handleClick = () => {
-    handleChange(null, "2");
+    handleChange(null, value);
   };
   return (
     <Stack
