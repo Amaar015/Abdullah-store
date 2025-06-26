@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Checkbox,
   FormControl,
@@ -12,12 +13,19 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import TabList from "@mui/lab/TabList";
+import TabPanel from "@mui/lab/TabPanel";
+
 import countries from "world-countries";
 import { State } from "country-state-city";
 import Ordersummary from "./Ordersummary";
 import { useState } from "react";
 import { shipping } from "../../data/data";
-
+import CreditCard from "./payments/CreditCard";
+import Paypal from "./payments/Paypal";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
 export const Information = ({ handleChange, Cart }) => {
   const [info, setInfo] = useState({
     email: "",
@@ -499,6 +507,11 @@ export const Shipping = ({ handleChange, Cart }) => {
 };
 
 export const Payment = ({ Cart }) => {
+  const [value, setValue] = useState("1");
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <Stack
       direction={"row"}
@@ -507,7 +520,27 @@ export const Payment = ({ Cart }) => {
       flexWrap={"wrap"}
       gap={{ xs: "3rem", md: "0" }}
     >
-      <Stack width={{ xs: "100%", sm: "80%", md: "50%" }}></Stack>
+      <Stack width={{ xs: "100%", sm: "80%", md: "50%" }}>
+        <Box sx={{ width: "100%", typography: "body1" }}>
+          <TabContext value={value}>
+            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+              <TabList
+                onChange={handleChange}
+                aria-label="lab API tabs example"
+              >
+                <Tab label="Credit Card" value={"1"} />
+                <Tab label="PayPal" value="2" />
+              </TabList>
+            </Box>
+            <TabPanel value="1">
+              <CreditCard />
+            </TabPanel>
+            <TabPanel value="2">
+              <Paypal />
+            </TabPanel>
+          </TabContext>
+        </Box>
+      </Stack>
       <Ordersummary Cart={Cart} />
     </Stack>
   );
