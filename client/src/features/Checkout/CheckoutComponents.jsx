@@ -18,7 +18,7 @@ import Ordersummary from "./Ordersummary";
 import { useState } from "react";
 import { shipping } from "../../data/data";
 
-export const Information = ({ handleChange }) => {
+export const Information = ({ handleChange, Cart }) => {
   const [info, setInfo] = useState({
     email: "",
     country: "",
@@ -339,12 +339,12 @@ export const Information = ({ handleChange }) => {
           </Stack>
         </form>
       </Stack>
-      <Ordersummary handleChange={handleChange} value={"3"} />
+      <Ordersummary handleChange={handleChange} value={"3"} Cart={Cart} />
     </Stack>
   );
 };
 
-export const Shipping = ({ handleChange }) => {
+export const Shipping = ({ handleChange, Cart }) => {
   const [selectedShipping, setSelectedShipping] = useState();
   return (
     <Stack
@@ -447,8 +447,68 @@ export const Shipping = ({ handleChange }) => {
             ))}
           </RadioGroup> */}
         </Stack>
+        <Stack
+          direction={"row"}
+          display={"flex"}
+          justifyContent={"space-between"}
+          alignItems={"center"}
+          marginTop={"2rem!important"}
+        >
+          <Button
+            type="submit"
+            variant="outlined"
+            sx={{
+              width: "150px",
+              height: "40px",
+              color: "#6a5acd",
+              borderColor: "#6a5acd",
+              "&:hover": {
+                backgroundColor: "#6a5acd",
+                color: "#fff",
+                borderColor: "#6a5acd",
+              },
+            }}
+            onClick={() => handleChange(null, "2")}
+          >
+            Return
+          </Button>
+          <Button
+            type="submit"
+            variant="outlined"
+            sx={{
+              width: "150px",
+              height: "40px",
+              backgroundColor: "#6a5acd",
+              color: "#fff",
+              borderColor: "#6a5acd",
+              "&:hover": {
+                color: "#6a5acd",
+                borderColor: "#6a5acd",
+                backgroundColor: "transparent",
+              },
+            }}
+            onClick={() => handleChange(null, "4")}
+          >
+            Continue
+          </Button>
+        </Stack>
       </Stack>
-      <Ordersummary handleChange={handleChange} value={"4"} />
+      <Ordersummary handleChange={handleChange} value={"4"} Cart={Cart} />
+    </Stack>
+  );
+};
+
+export const Payment = ({ Cart }) => {
+  return (
+    <Stack
+      direction={"row"}
+      display={"flex"}
+      justifyContent={"space-between"}
+      flexWrap={"wrap"}
+      gap={{ xs: "3rem", md: "0" }}
+    >
+      <Stack width={{ xs: "100%", sm: "80%", md: "50%" }}></Stack>
+      <Ordersummary Cart={Cart} />
     </Stack>
   );
 };

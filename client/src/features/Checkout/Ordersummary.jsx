@@ -2,13 +2,11 @@ import { Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 import { recentSearch } from "../../data/data";
 
-const Ordersummary = ({ handleChange, value }) => {
-  const cartItems = recentSearch.filter((item) => item.inCart === true);
-
-  const subtotal = cartItems.reduce((total, item) => {
-    return total + item.price;
-  }, 0);
-
+const Ordersummary = ({ handleChange, value, Cart }) => {
+  const subtotal = Cart.reduce(
+    (sum, product) => sum + product.quantity * product.price,
+    0
+  );
   const shipping = 5; // Example fixed shipping or you can make it dynamic
   const total = subtotal + shipping;
 

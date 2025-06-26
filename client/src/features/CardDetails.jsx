@@ -7,11 +7,14 @@ import "../components/styled-components/Style.css";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import HomeIcon from "@mui/icons-material/Home";
 import Comments from "../sections/Comments";
+import { addToCart } from "../utils/cartUtils";
 const CardDetails = () => {
   const product = recentSearch.find((item) => item.id === 4);
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setselectedColor] = useState("brown");
-
+  const handleAddCart = (product) => {
+    addToCart(product);
+  };
   return (
     <>
       <Stack
@@ -166,7 +169,12 @@ const CardDetails = () => {
           >
             Exclusive Offer: Get 1 free when you buy 4.
           </Typography>
-          <button className="quantity-button">Add to Cart</button>
+          <button
+            className="quantity-button"
+            onClick={() => handleAddCart(product)}
+          >
+            Add to Cart
+          </button>
           <Stack
             direction={"row"}
             display={"flex"}

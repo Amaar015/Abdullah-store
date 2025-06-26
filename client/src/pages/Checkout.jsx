@@ -7,18 +7,32 @@ import TabPanel from "@mui/lab/TabPanel";
 import CheckIcon from "@mui/icons-material/Check";
 import { Stack } from "@mui/material";
 import Cart from "./Cart";
-import { Information, Shipping } from "../features/Checkout/CheckoutComponents";
+import {
+  Information,
+  Payment,
+  Shipping,
+} from "../features/Checkout/CheckoutComponents";
+import { getCart, removeFromCart } from "../utils/cartUtils";
 
 export default function Checkout() {
   const [value, setValue] = React.useState("1");
+  const [refreshCart, setRefreshCart] = React.useState(getCart());
+
+  const Refreshcarts = () => {
+    setRefreshCart(getCart());
+  };
+
+  const handleRemove = (productId) => {
+    removeFromCart(productId); // updates localStorage
+    Refreshcarts(); // updates UI
+  };
 
   // Simulate form completion
   const completedSteps = ["1"]; // add more like ['1', '2'] when more are completed
-  console.log("Hello Amaar", value);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  const Carts = getCart();
   const tabData = [
     { value: "1", label: "Cart" },
     { value: "2", label: "Information" },
@@ -118,13 +132,20 @@ export default function Checkout() {
 
         <Box mt={4}>
           <TabPanel value="1">
-            <Cart handleChange={handleChange} />
+            <Cart
+              handleChange={handleChange}
+              Cart={refreshCart}
+              Remove={handleRemove}
+            />
           </TabPanel>
           <TabPanel value="2">
-            <Information handleChange={handleChange} />
+            <Information handleChange={handleChange} Cart={refreshCart} />
           </TabPanel>
           <TabPanel value="3">
-            <Shipping handleChange={handleChange} />
+            <Shipping handleChange={handleChange} Cart={refreshCart} />
+          </TabPanel>
+          <TabPanel value="4">
+            <Payment Cart={refreshCart} />
           </TabPanel>
         </Box>
       </TabContext>

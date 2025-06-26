@@ -6,8 +6,12 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import { useNavigate } from "react-router-dom";
+import { addToCart } from "../../utils/cartUtils";
 const TopSelles = () => {
   const navigate = useNavigate();
+  const handleAddCart = (product) => {
+    addToCart(product);
+  };
   return (
     <Stack padding={{ xs: "3rem 1rem", sm: "3rem 2rem", md: "3rem 4rem" }}>
       <Typography
@@ -37,12 +41,7 @@ const TopSelles = () => {
         className="top-sellers"
       >
         {recentSearch.slice(0, 8).map((data) => (
-          <Stack
-            className="card"
-            onClick={() => {
-              navigate(`/card-detail/${data.id}`);
-            }}
-          >
+          <Stack className="card">
             <div className="card-icon">
               <IconButton
                 sx={{
@@ -51,6 +50,7 @@ const TopSelles = () => {
                   width: "2rem",
                   height: "2rem",
                 }}
+                onClick={() => handleAddCart(data)}
               >
                 {data.inCart ? (
                   <ShoppingBagIcon
@@ -82,7 +82,15 @@ const TopSelles = () => {
               </IconButton>
             </div>
             <img src={data.image} alt="" />
-            <Stack textAlign={"center"} spacing={"0.3rem"} marginTop={"0.5rem"}>
+            <Stack
+              textAlign={"center"}
+              spacing={"0.3rem"}
+              marginTop={"0.5rem"}
+              onClick={() => {
+                navigate(`/card-detail/${data.id}`);
+              }}
+              sx={{ cursor: "pointer" }}
+            >
               <Typography variant="h5" fontSize={"1.2rem"} fontWeight={"550"}>
                 {data.name}
               </Typography>

@@ -57,7 +57,7 @@
   /* width: 300px !important; */
   height: 400px;
   overflow: hidden;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .card img {
   width: 100%;

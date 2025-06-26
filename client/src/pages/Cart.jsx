@@ -7,13 +7,12 @@ import { Buttons, Buttonss } from "../components/styled-components/Buttons";
 import { useNavigate } from "react-router-dom";
 import Likes from "../features/Likes";
 import Ordersummary from "../features/Checkout/Ordersummary";
-const Cart = ({ handleChange }) => {
-  const cartItems = recentSearch.filter((item) => item.inCart === true);
-
-  const subtotal = cartItems.reduce((total, item) => {
-    return total + item.price;
-  }, 0);
-
+import { RemoveAll, removeFromCart } from "../utils/cartUtils";
+const Cart = ({ handleChange, Cart, Remove }) => {
+  const subtotal = Cart.reduce(
+    (sum, product) => sum + product.quantity * product.price,
+    0
+  );
   const shipping = 5; // Example fixed shipping or you can make it dynamic
   const total = subtotal + shipping;
 
@@ -28,7 +27,7 @@ const Cart = ({ handleChange }) => {
       paddingBottom={"3rem"}
     >
       <Stack spacing={4} width={{ xs: "100%", sm: "80%", md: "50%" }}>
-        {cartItems.map((item) => (
+        {Cart.map((item) => (
           <Stack
             key={item.id}
             direction={"row"}
@@ -66,7 +65,7 @@ const Cart = ({ handleChange }) => {
                     Size: {item.size}
                   </Typography>
                 </Stack>
-                <Quantity visible={true} />
+                <Quantity visible={true} product={item} />
               </Stack>
             </Stack>
             <Stack
@@ -82,14 +81,14 @@ const Cart = ({ handleChange }) => {
               <Typography fontWeight={"bold"} color="#6a5acd">
                 ${item.price}
               </Typography>
-              <IconButton>
+              <IconButton onClick={() => Remove(item.id)}>
                 <DeleteIcon sx={{ color: "#777" }} />
               </IconButton>
             </Stack>
           </Stack>
         ))}
       </Stack>
-      <Ordersummary handleChange={handleChange} value={"2"} />
+      <Ordersummary handleChange={handleChange} value={"2"} Cart={Cart} />
     </Stack>
   );
 };

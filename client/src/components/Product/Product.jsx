@@ -24,6 +24,7 @@ import { DrawerContent } from "./Drawer";
 import { usePagination } from "../../hooks/Pagination";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { addToCart } from "../../utils/cartUtils";
 // import {  toggleDrawer } from "./Drawer";
 const Product = () => {
   const [open, setOpen] = useState(false);
@@ -35,6 +36,10 @@ const Product = () => {
     currentPageIndex,
     displayPage,
   ] = usePagination(15, recentSearch.length);
+
+  const handleAddCart = (product) => {
+    addToCart(product);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -130,12 +135,7 @@ const Product = () => {
                   transition={{ duration: 1, ease: "easeOut" }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-                  <Stack
-                    className="card"
-                    onClick={() => {
-                      navigate(`/card-detail/${data.id}`);
-                    }}
-                  >
+                  <Stack className="card">
                     <div className="card-icon">
                       <IconButton
                         sx={{
@@ -144,6 +144,7 @@ const Product = () => {
                           width: "2rem",
                           height: "2rem",
                         }}
+                        onClick={() => handleAddCart(data)}
                       >
                         {data.inCart ? (
                           <ShoppingBagIcon sx={{ color: "#6a5acd" }} />
@@ -177,7 +178,15 @@ const Product = () => {
                       </IconButton>
                     </div>
                     <img src={data.image} alt={data.name} />
-                    <Stack textAlign="center" spacing={"0.3rem"} mt={"0.5rem"}>
+                    <Stack
+                      textAlign="center"
+                      spacing={"0.3rem"}
+                      mt={"0.5rem"}
+                      sx={{ cursor: "pointer" }}
+                      onClick={() => {
+                        navigate(`/card-detail/${data.id}`);
+                      }}
+                    >
                       <Typography
                         variant="h5"
                         fontSize="1.2rem"

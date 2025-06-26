@@ -13,10 +13,14 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import { useNavigate } from "react-router-dom";
+import { addToCart } from "../../utils/cartUtils";
 const NewArrivals = () => {
   const navigate = useNavigate();
   const handleNaigate = () => {
     navigate("/products");
+  };
+  const handleAddCart = (product) => {
+    addToCart(product);
   };
   return (
     <Stack height={"100%"} width={"100%"} padding={"4rem 0rem 2rem 0rem"}>
@@ -54,13 +58,7 @@ const NewArrivals = () => {
           className="mySwiper"
         >
           {recentSearch.map((data) => (
-            <SwiperSlide
-              key={data.id}
-              className="card"
-              onClick={() => {
-                navigate(`/card-detail/${data.id}`);
-              }}
-            >
+            <SwiperSlide key={data.id} className="card">
               <div className="card-icon">
                 <IconButton
                   sx={{
@@ -69,6 +67,7 @@ const NewArrivals = () => {
                     width: "2rem",
                     height: "2rem",
                   }}
+                  onClick={() => handleAddCart(data)}
                 >
                   {data.inCart ? (
                     <ShoppingBagIcon
@@ -104,6 +103,10 @@ const NewArrivals = () => {
                 textAlign={"center"}
                 spacing={"0.3rem"}
                 marginTop={"0.5rem"}
+                sx={{ cursor: "pointer" }}
+                onClick={() => {
+                  navigate(`/card-detail/${data.id}`);
+                }}
               >
                 <Typography variant="h5" fontSize={"1.2rem"} fontWeight={"550"}>
                   {data.name}

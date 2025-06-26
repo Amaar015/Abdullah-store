@@ -5,8 +5,14 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import { addToCart } from "../utils/cartUtils";
+import { useNavigate } from "react-router-dom";
 
 const Likes = () => {
+  const navigate = useNavigate();
+  const handleAddCart = (product) => {
+    addToCart(product);
+  };
   return (
     <>
       {/* you might also like */}
@@ -30,12 +36,7 @@ const Likes = () => {
           className="top-sellers"
         >
           {recentSearch.slice(0, 4).map((data) => (
-            <Stack
-              className="card"
-              onClick={() => {
-                navigate(`/card-detail/${data.id}`);
-              }}
-            >
+            <Stack className="card">
               <div className="card-icon">
                 <IconButton
                   sx={{
@@ -44,6 +45,7 @@ const Likes = () => {
                     width: "2rem",
                     height: "2rem",
                   }}
+                  onClick={() => handleAddCart(data)}
                 >
                   {data.inCart ? (
                     <ShoppingBagIcon
@@ -79,6 +81,11 @@ const Likes = () => {
                 textAlign={"center"}
                 spacing={"0.3rem"}
                 marginTop={"0.5rem"}
+                sx={{ cursor: "pointer" }}
+                onClick={() => {
+                  navigate(`/card-detail/${data.id}`);
+                  window.scrollTo(0, 0);
+                }}
               >
                 <Typography variant="h5" fontSize={"1.2rem"} fontWeight={"550"}>
                   {data.name}
