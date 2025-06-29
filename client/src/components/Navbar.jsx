@@ -1,4 +1,4 @@
-import { IconButton, Stack, Typography } from "@mui/material";
+import { IconButton, Menu, MenuItem, Stack, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
@@ -13,6 +13,8 @@ import { NavItems } from "../data/data";
 
 const Navbar = () => {
   const isLogin = false;
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
   const [open, setOpen] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
   const handleOpen = () => setOpen(true);
@@ -21,7 +23,13 @@ const Navbar = () => {
     setOpen(false);
     setActiveModal(null); // close dropdown type
   };
-
+  const openMenu = Boolean(anchorEl);
+  const handleClickMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleCloseMenu = () => {
+    setAnchorEl(null);
+  };
   useEffect(() => {
     const handleResize = () => {
       if (
@@ -92,13 +100,33 @@ const Navbar = () => {
         >
           <ShoppingBagIcon />
         </IconButton>
-        {isLogin ? (
-          <IconButton
-            onClick={() => handleNavigate("/profile")}
-            sx={{ width: "1.5rem", fontSize: "1.2rem", color: "#333" }}
-          >
-            <AccountCircleIcon />
-          </IconButton>
+        {true ? (
+          <>
+            <IconButton
+              aria-controls={openMenu ? "account-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={openMenu ? "true" : undefined}
+              onClick={handleClickMenu}
+              sx={{ width: "1.5rem", fontSize: "1.2rem", color: "#333" }}
+            >
+              <AccountCircleIcon />
+            </IconButton>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={openMenu}
+              onClose={handleCloseMenu}
+              slotProps={{
+                list: {
+                  "aria-labelledby": "basic-button",
+                },
+              }}
+            >
+              <MenuItem onClick={handleCloseMenu}>Profile</MenuItem>
+              <MenuItem onClick={handleCloseMenu}>My account</MenuItem>
+              <MenuItem onClick={handleCloseMenu}>Logout</MenuItem>
+            </Menu>
+          </>
         ) : (
           <IconButton
             onClick={() => handleNavigate("/login")}

@@ -7,10 +7,13 @@ import {
 } from "@mui/material";
 import React from "react";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
-const CreditCard = () => {
+import { useNavigate } from "react-router-dom";
+const CreditCard = ({ handleChange }) => {
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
   return (
     <Stack spacing={2}>
       <Typography fontSize={"1.4rem"} fontWeight={"bold"} color="#444">
@@ -68,8 +71,8 @@ const CreditCard = () => {
             alignItems={"center"}
           >
             <TextField
-              label="Address"
-              name="address"
+              label="Expiry Date"
+              name="expiry_date"
               required
               // value={review.name}
               // onChange={handleChange}
@@ -86,8 +89,8 @@ const CreditCard = () => {
               }}
             />
             <TextField
-              label="City"
-              name="city"
+              label="CSV"
+              name="csv"
               required
               // value={review.name}
               // onChange={handleChange}
@@ -143,7 +146,10 @@ const CreditCard = () => {
                   backgroundColor: "transparent",
                 },
               }}
-              onClick={() => handleChange(null, "3")}
+              onClick={() => {
+                handleChange(null, "3");
+                navigate("/complete-order");
+              }}
             >
               Pay
             </Button>

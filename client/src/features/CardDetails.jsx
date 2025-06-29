@@ -159,7 +159,7 @@ const CardDetails = () => {
             </Stack>
           </Stack>
           <Divider sx={{ height: "1px", bgcolor: "#D1D5DB" }} />
-          <Quantity />
+          {/* <Quantity product={product} visible={false} /> */}
           <Typography
             fontFamily={"12px"}
             padding={"0.4rem 1rem"}

@@ -12,6 +12,8 @@ import Error from "../pages/Error";
 import CardDetails from "../features/CardDetails";
 import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout";
+import CompleteOrder from "../features/Checkout/CompleteOrder";
+import Profile from "../pages/Profile";
 
 const Loadable = (Component) => (props) => {
   return (
@@ -37,10 +39,19 @@ export default function Router() {
         { path: "login", element: <Login /> },
         { path: "register", element: <Register /> },
         { path: "cart", element: <Checkout /> },
-        // { path: "checkout", element: <Checkout /> },
+        { path: "complete-order", element: <CompleteOrder /> },
+        // Auth Routes
+        { path: "auth/profile", element: <Profile /> },
         { path: "*", element: <Error /> },
       ],
     },
+    // {
+    //   path: "/auth/",
+    //   element: <GeneralLayout />,
+    //   children:[
+
+    //   ]
+    // },
   ]);
 }
 

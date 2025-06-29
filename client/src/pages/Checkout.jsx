@@ -145,7 +145,7 @@ export default function Checkout() {
             <Shipping handleChange={handleChange} Cart={refreshCart} />
           </TabPanel>
           <TabPanel value="4">
-            <Payment Cart={refreshCart} />
+            <Payment handleChange={handleChange} Cart={refreshCart} />
           </TabPanel>
         </Box>
       </TabContext>
