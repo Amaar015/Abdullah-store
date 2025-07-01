@@ -1,4 +1,13 @@
-import { IconButton, Menu, MenuItem, Stack, Typography } from "@mui/material";
+import {
+  IconButton,
+  ListItemIcon,
+  Menu,
+  MenuItem,
+  Stack,
+  Typography,
+  Avatar,
+  Divider,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
@@ -10,6 +19,11 @@ import { StyledStack } from "./styled-components/navStyled";
 import Search from "./Search";
 import Cart from "./Cart";
 import { NavItems } from "../data/data";
+import LogoutIcon from "@mui/icons-material/Logout";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ReceiptIcon from "@mui/icons-material/Receipt";
+import EditIcon from "@mui/icons-material/Edit";
 
 const Navbar = () => {
   const isLogin = false;
@@ -112,19 +126,61 @@ const Navbar = () => {
               <AccountCircleIcon />
             </IconButton>
             <Menu
-              id="basic-menu"
               anchorEl={anchorEl}
-              open={openMenu}
-              onClose={handleCloseMenu}
+              id="account-menu"
+              open={open}
+              onClose={handleClose}
+              onClick={handleClose}
               slotProps={{
-                list: {
-                  "aria-labelledby": "basic-button",
+                paper: {
+                  elevation: 0,
+                  sx: {
+                    overflow: "visible",
+                    filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
+                    mt: 1.5,
+                    "& .MuiAvatar-root": {
+                      width: 32,
+                      height: 32,
+                      ml: -0.5,
+                      mr: 1,
+                    },
+                    "&::before": {
+                      content: '""',
+                      display: "block",
+                      position: "absolute",
+                      top: 0,
+                      right: 14,
+                      width: 10,
+                      height: 10,
+                      bgcolor: "background.paper",
+                      transform: "translateY(-50%) rotate(45deg)",
+                      zIndex: 0,
+                    },
+                  },
                 },
               }}
+              transformOrigin={{ horizontal: "right", vertical: "top" }}
+              anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             >
-              <MenuItem onClick={handleCloseMenu}>Profile</MenuItem>
-              <MenuItem onClick={handleCloseMenu}>My account</MenuItem>
-              <MenuItem onClick={handleCloseMenu}>Logout</MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Avatar /> Profile
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <ShoppingBagIcon /> My Orders
+              </MenuItem>
+              <Divider />
+              <MenuItem onClick={handleClose}>
+                <ListItemIcon>
+                  <ReceiptIcon fontSize="small" />
+                </ListItemIcon>
+                Review
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <ListItemIcon>
+                  <LogoutIcon fontSize="small" />
+                </ListItemIcon>
+                Logout
+              </MenuItem>
             </Menu>
           </>
         ) : (

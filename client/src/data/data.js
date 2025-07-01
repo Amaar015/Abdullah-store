@@ -1,3 +1,5 @@
+import image from "../assets/products/p-1.jpg";
+
 export const departments = [
   { id: 1, title: "Mens", totalCount: 200 },
   { id: 2, title: "Kids", totalCount: 100 },
@@ -57,59 +59,23 @@ export const PriceRange = [
 export const recentSearch = [
   {
     id: 1,
-    name: "Man in Green Zip Up Jacket",
-    price: 85.8,
-    department: "Man",
-    colors: "brown",
-    size: "M",
-    stock: 10,
-    category: "Jackets",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
-  },
-  {
-    id: 2,
-    name: "ST Leather Handbag",
-    price: 19.88,
-    stock: 10,
-    department: "Man",
-    colors: "brown",
-    size: "M",
-
-    image:
-      "https://eu.velasca.com/cdn/shop/files/01_beleratt_m_grande.jpg?v=1708422426",
-    inCart: true,
-  },
-  {
-    id: 3,
-    name: "Running Mens Sport",
-    price: 98.9,
-    department: "Man",
-    colors: "brown",
-    size: "M",
-    stock: 10,
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: true,
-  },
-  {
-    id: 4,
-    name: "Leather Sneakers",
+    name: "Man in Zip up jacket",
     price: 50.4,
     price_before: 100.08,
-    stock: 10,
+    stock: 20,
     category: "Man",
-    variety: "Shoes",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    variety: "Jacket",
+    image: "/products/p-1.1.webp",
     images: [
-      "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-      "https://eu.velasca.com/cdn/shop/files/01_beleratt_m_grande.jpg?v=1708422426",
-      "https://paulevansny.com/cdn/shop/files/SmithBrown41200x1500_2048x.jpg?v=1686675658",
-      "https://olukai.com/cdn/shop/files/10455_KNKN_101_aaed93a5-f8e7-49d9-bb0d-b2ec76e9e5f7.jpg?v=1736437238",
+      "/products/p-1.1.webp",
+      "/products/p-1.2.webp",
+      "/products/p-1.3.jpeg",
+      "/products/p-1.4.webp",
     ],
-    size: [5, 6, 7, 8, 9, 10],
-    color: ["black", "white", "brown"],
+    size: ["S", "M", "L", "XXL"],
+    color: "brown",
     description:
-      "Leather sneakers are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
     benefits: [
       "Long-lasting durability",
 
@@ -126,259 +92,641 @@ export const recentSearch = [
     inCart: false,
   },
   {
+    id: 2,
+    name: "St Leather Handbag",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Women",
+    variety: "Hangbag",
+    image: "/products/p-2.1.jpg",
+    images: [
+      "/products/p-2.1.jpg",
+      "/products/p-2.2.jpg",
+      "/products/p-2.3.jpg",
+      "/products/p-2.4.jpg",
+    ],
+    color: "brown",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
+    inCart: false,
+  },
+  {
+    id: 3,
+    name: "Sport Running Shoes",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Men",
+    size: [6, 7, 8, 9, 10],
+    variety: "Shoes",
+    image: "/products/p-5.1.jpg",
+    images: [
+      "/products/p-5.1.jpg",
+      "/products/p-5.2.jpg",
+      "/products/p-5.3.jpg",
+      "/products/p-5.4.jpg",
+    ],
+    color: "white",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
+    inCart: false,
+  },
+  {
+    id: 4,
+    name: "Women Sports Shoes",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Women",
+    variety: "Shoes",
+    size: [6, 7, 8, 9, 10],
+    image: "/products/p-7.1.jpg",
+    images: [
+      "/products/p-7.1.jpg",
+      "/products/p-7.2.jpg",
+      "/products/p-7.3.jpg",
+      "/products/p-7.4.jpg",
+    ],
+    color: "black",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
+    inCart: false,
+  },
+
+  {
     id: 5,
-    name: "Woman Brown Outher",
-    price: 30.2,
-    category: "Woman",
-    stock: 10,
-    image:
-      "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
+    name: "Elegant Green Leather Bag",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Women",
+    variety: "Hangbag",
+    image: "/products/p-4.1.jpg",
+    images: [
+      "/products/p-4.1.jpg",
+      "/products/p-4.2.jpg",
+      "/products/p-4.3.jpg",
+      "/products/p-4.4.jpg",
+    ],
+    color: "green",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 6,
-    name: "Mens Otis Sport Polo",
-    price: 20.1,
-    stock: 10,
-    category: "Man",
-    image:
-      "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
+    name: "Men Running Shoes",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Men",
+    variety: "Shoes",
+    size: [6, 7, 8, 9, 10],
+    image: "/products/p-6.1.jpeg",
+    images: [
+      "/products/p-6.1.jpeg",
+      "/products/p-6.2.jpeg",
+      "/products/p-6.3.jpg",
+      "/products/p-6.4.jpg",
+    ],
+    color: "black",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 7,
-    name: "Running Mens Sport",
-    price: 98.3,
-    stock: 10,
-    category: "Man",
-    image:
-      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
+    name: "Men Hand Watch",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Men",
+    variety: "Men Hand Watch",
+    image: "/products/p-9.1.webp",
+    images: [
+      "/products/p-9.1.webp",
+      "/products/p-9.2.webp",
+      "/products/p-9.3.webp",
+      "/products/p-9.4.webp",
+    ],
+    color: "black",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 8,
-    name: "Leather Sneakers",
-    price: 50.93,
-    stock: 10,
-    category: "Man",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    name: "White Plain Shirt",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Men",
+    size: ["S", "M", "L", "XXL"],
+    variety: "Men White Shirt",
+    image: "/products/p-13.1.webp",
+    images: [
+      "/products/p-13.1.webp",
+      "/products/p-13.2.webp",
+      "/products/p-13.3.webp",
+      "/products/p-13.4.jpeg",
+    ],
+    color: "white",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 9,
-    name: "Woman Brown Outher",
-    price: 30.02,
-    category: "Woman",
-    stock: 10,
-    image:
-      "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
+    name: "Men's Office Shoes",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Men",
+    size: [5, 6, 7, 8, 9, 10],
+    variety: "Men Shoes",
+    image: "/products/p-10.1.jpg",
+    images: [
+      "/products/p-10.1.jpg",
+      "/products/p-10.1.jpg",
+      "/products/p-10.1.jpg",
+      "/products/p-10.1.jpg",
+    ],
+    color: "brown",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 10,
-    name: "Mens Otis Sport Polo",
-    price: 20.2,
-    stock: 10,
-    category: "Man",
-    image:
-      "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
+    name: "Kids Cheque Shirts",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Kids",
+    size: ["S", "M"],
+    variety: "Kids Clothes",
+    image: "/products/p-14.1.jpeg",
+    images: [
+      "/products/p-14.1.jpeg",
+      "/products/p-14.2.jpeg",
+      "/products/p-14.3.jpeg",
+      "/products/p-14.4.jpeg",
+    ],
+    color: "Blue",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 11,
-    name: "Man in Green Zip Up Jacket",
-    price: 85.1,
-    stock: 10,
-    department: "Man",
-    colors: "brown",
-    size: "M",
-    category: "Jackets",
-    image: "https://m.media-amazon.com/images/I/61W6FfnUXgL._AC_UY1000_.jpg",
+    name: "Leather Handbag",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Women",
+    variety: "Women",
+    image: "/products/p-3.1.jpg",
+    images: [
+      "/products/p-3.1.jpg",
+      "/products/p-3.2.jpeg",
+      "/products/p-3.3.jpg",
+      "/products/p-3.4.jpg",
+    ],
+    color: "white",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 12,
-    name: "ST Leather Handbag",
-    price: 19.48,
-    stock: 10,
-    category: "Woman",
-    image:
-      "https://m.media-amazon.com/images/I/41PINc-kuxL._AC_QL92_SH45_UL240_SR240,220_.jpg",
+    name: "Navy Blue Men’s Polo Shirt",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Man",
+    size: ["S", "M", "L", "XXL"],
+    variety: "Kids Clothes",
+    image: "/products/p-12.1.jpg",
+    images: [
+      "/products/p-12.1.jpg",
+      "/products/p-12.2.jpeg",
+      "/products/p-12.3.jpg",
+      "/products/p-12.4.jpg",
+    ],
+    color: "white",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 13,
-    name: "Running Mens Sport",
-    price: 98.5,
-    stock: 10,
-    category: "Man",
-    image:
-      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
+    name: "women synthetic running jogger shoes",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Women",
+    size: [5, 6, 7, 8, 9, 10],
+    variety: "shoes",
+    image: "/products/p-8.1.jpeg",
+    images: [
+      "/products/p-8.1.jpeg",
+      "/products/p-8.2.jpeg",
+      "/products/p-8.3.jpg",
+      "/products/p-8.4.jpeg",
+    ],
+    color: "purple",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 14,
-    name: "Leather Sneakers",
-    price: 50.6,
-    stock: 10,
-    category: "Man",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    name: "Black Man Shoes",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Men",
+    size: [5, 6, 7, 8, 9, 10],
+    variety: "shoes",
+    image: "/products/p-11.1.jpg",
+    images: [
+      "/products/p-11.1.jpg",
+      "/products/p-11.2.jpeg",
+      "/products/p-11.3.jpg",
+      "/products/p-11.4.jpeg",
+    ],
+    color: "white",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 15,
-    name: "Woman Brown Outher",
-    price: 30.75,
-    stock: 10,
-    category: "Woman",
-    image:
-      "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
+    name: "High Jewellery",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "women",
+    variety: "jewellery",
+    image: "/products/p-15.1.jpeg",
+    images: [
+      "/products/p-15.1.jpeg",
+      "/products/p-15.2.jpeg",
+      "/products/p-15.3.jpg",
+      "/products/p-15.4.jpeg",
+    ],
+    color: "yellow",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 16,
-    name: "Man in Green Zip Up Jacket",
-    price: 85.8,
-    stock: 10,
-    department: "Man",
-    colors: "brown",
-    size: "M",
-    category: "Jackets",
-    image: "https://m.media-amazon.com/images/I/61W6FfnUXgL._AC_UY1000_.jpg",
+    name: "Yunicus Toddler Light Up Shoes",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Kids",
+    size: ["S"],
+    variety: "shoes",
+    image: "/products/p-16.1.jpg",
+    images: [
+      "/products/p-14.1.jpg",
+      "/products/p-14.2.jpeg",
+      "/products/p-14.3.webp",
+      "/products/p-14.4.webp",
+    ],
+    color: "pink",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 17,
-    name: "ST Leather Handbag",
-    price: 19.88,
-    stock: 10,
-    category: "Woman",
-    image:
-      "https://m.media-amazon.com/images/I/41PINc-kuxL._AC_QL92_SH45_UL240_SR240,220_.jpg",
+    name: "Meta Smart Glasses",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Mens",
+    variety: "glasses",
+    image: "/products/p-17.1.webp",
+    images: [
+      "/products/p-17.1.webp",
+      "/products/p-17.2.jpeg",
+      "/products/p-17.3.jpeg",
+      "/products/p-17.4.webp",
+    ],
+    color: "white",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 18,
-    name: "Running Mens Sport",
-    price: 98.9,
-    stock: 10,
-    category: "Man",
-    image:
-      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
+    name: "Luxury Blue 3 Piece Suite",
+    price: 300.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Mens",
+    size: ["S", "M", "L", "XXL"],
+    variety: "clothes",
+    image: "/products/p-19.1.jpg",
+    images: [
+      "/products/p-19.1.jpg",
+      "/products/p-19.2.jpeg",
+      "/products/p-19.3.webp",
+      "/products/p-19.4.webp",
+    ],
+    color: "blue",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 19,
-    name: "Leather Sneakers",
-    price: 50.4,
-    stock: 10,
-    category: "Man",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    name: "Irresistible",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Men",
+    variety: "perfume",
+    image: "/products/p-20.1.webp",
+    images: [
+      "/products/p-20.1.webp",
+      "/products/p-20.2.webp",
+      "/products/p-20.3.jpeg",
+      "/products/p-20.4.jpg",
+    ],
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
   {
     id: 20,
-    name: "Woman Brown Outher",
-    price: 30.2,
-    stock: 10,
-    category: "Woman",
-    image:
-      "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
-    inCart: false,
-  },
-  {
-    id: 21,
-    name: "Mens Otis Sport Polo",
-    price: 20.1,
-    stock: 10,
-    category: "Man",
-    image:
-      "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
-    inCart: false,
-  },
-  {
-    id: 22,
-    name: "Running Mens Sport",
-    price: 98.3,
-    stock: 10,
-    category: "Man",
-    image:
-      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
-    inCart: false,
-  },
-  {
-    id: 23,
-    name: "Leather Sneakers",
-    price: 50.93,
-    stock: 10,
-    category: "Man",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: false,
-  },
-  {
-    id: 24,
-    name: "Leather Sneakers",
-    price: 50.93,
-    stock: 10,
-    category: "Man",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: false,
-  },
-  {
-    id: 25,
-    name: "Leather Sneakers",
-    price: 50.4,
-    stock: 10,
-    category: "Man",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: false,
-  },
-  {
-    id: 26,
-    name: "Woman Brown Outher",
-    price: 30.2,
-    stock: 10,
-    category: "Woman",
-    image:
-      "https://www.theiconfashion.com/wp-content/uploads/2024/12/Lois-Womens-Cognac-Leather-Biker-Jacket-3.webp",
-    inCart: false,
-  },
-  {
-    id: 27,
-    name: "Mens Otis Sport Polo",
-    price: 20.1,
-    stock: 10,
-    category: "Man",
-    image:
-      "https://www.nyfifth.com/category/20190808/TM16311438_B_OFF-MODEL-FRONT.jpg",
-    inCart: false,
-  },
-  {
-    id: 28,
-    name: "Running Mens Sport",
-    price: 98.3,
-    stock: 10,
-    category: "Man",
-    image:
-      "https://rukminim2.flixcart.com/image/850/1000/xif0q/shoe/r/k/q/7-bronco-tr-black-original-imagyh6nundg7zea.jpeg?q=20&crop=false",
-    inCart: false,
-  },
-  {
-    id: 29,
-    name: "Leather Sneakers",
-    price: 50.93,
-    stock: 10,
-    category: "Man",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
-    inCart: false,
-  },
-  {
-    id: 30,
-    name: "Leather Sneakers",
-    price: 50.93,
-    stock: 10,
-    category: "Man",
-    image: "https://www.dmodot.com/cdn/shop/files/IMG_5784.jpg?v=1722330420",
+    name: "RB Aviator Eyeglasses",
+    price: 100.43,
+    price_before: 150.08,
+    stock: 20,
+    category: "Mens",
+    variety: "glasses",
+    image: "/products/p-18.1.jpg",
+    images: [
+      "/products/p-18.1.jpg",
+      "/products/p-18.2.jpg",
+      "/products/p-18.3.jpeg",
+      "/products/p-18.4.jpeg",
+    ],
+    color: "white",
+    description:
+      "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
+    benefits: [
+      "Long-lasting durability",
+
+      "Premium look",
+
+      "All-day comfort",
+
+      "Easy to clean",
+
+      "Weather-resistant material",
+
+      "Breathable inner lining",
+    ],
     inCart: false,
   },
 ];
