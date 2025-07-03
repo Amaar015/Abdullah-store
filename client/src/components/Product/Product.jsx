@@ -37,13 +37,15 @@ const Product = () => {
     priceMin: 0,
     priceMax: 9999,
   });
+  const [filteredProducts, setFilteredProducts] = useState(recentSearch);
+
   const [
     totalPages,
     startPageIndex,
     endPageIndex,
     currentPageIndex,
     displayPage,
-  ] = usePagination(15, recentSearch.length);
+  ] = usePagination(15, filteredProducts.length);
 
   const handleAddCart = (product) => {
     addToCart(product);
@@ -55,21 +57,6 @@ const Product = () => {
         setOpen(false);
       }
       // Apply here filter
-      const result = recentSearch.filter((products) => {
-        const matchCategory = filters.category
-          ? products.category.toLowerCase() === filters.category.toLowerCase()
-          : true;
-        const matchVatriety = filters.variety
-          ? products.category.toLowerCase() === filters.category.toLowerCase()
-          : true;
-        const matchColor = filters.color
-          ? products.category.toLowerCase() === filters.category.toLowerCase()
-          : true;
-        const matchSize = filters.size
-          ? products.category.toLowerCase() === filters.category.toLowerCase()
-          : true;
-        const matchPrice =  products.price >= filters.priceMin && products.price <=  
-      });
     };
 
     window.addEventListener("resize", handleResize);
@@ -80,7 +67,36 @@ const Product = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  useEffect(() => {
+    const result = recentSearch.filter((product) => {
+      const matchCategory = filters.category
+        ? product.category?.toLowerCase() === filters.category.toLowerCase()
+        : true;
+      const matchVariety = filters.variety
+        ? product.variety?.toLowerCase() === filters.variety.toLowerCase()
+        : true;
 
+      const matchSize = filters.size
+        ? Array.isArray(product.size) &&
+          product.size.some((s) => s === filters.size)
+        : true;
+
+      const matchColor = filters.color
+        ? product.color?.toLowerCase() === filters.color.toLowerCase()
+        : true;
+      const matchPrice =
+        product.price >= filters.priceMin && product.price <= filters.priceMax;
+
+      return (
+        matchCategory && matchVariety && matchSize && matchColor && matchPrice
+      );
+    });
+
+    setFilteredProducts(result);
+  }, [filters]);
+
+  console.log(filters);
+  console.log(filteredProducts);
   return (
     <Stack
       spacing={2}
@@ -97,6 +113,7 @@ const Product = () => {
           onCloseDrawer={() => setOpen(false)}
           filter={filters}
           setFilter={setFilters}
+          products={filteredProducts}
         />
       </Stack>
       {/* Product section */}
@@ -135,106 +152,109 @@ const Product = () => {
               onCloseDrawer={() => setOpen(false)}
               filter={filters}
               setFilter={setFilters}
+              products={filteredProducts}
             />
           </SwipeableDrawer>
         </Stack>
-        <Stack
-          direction={"row"}
-          display={"flex"}
-          justifyContent={"center"}
-          flexWrap={"wrap"}
-          gap={"1.5rem"}
-          className="product-card"
-        >
-          {(() => {
-            const displayPosts = [];
-            for (let i = startPageIndex; i <= endPageIndex; i++) {
-              const data = recentSearch[i];
-              if (!data) continue;
-              displayPosts.push(
-                <motion.div
-                  key={i}
-                  initial={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 1, ease: "easeOut" }}
-                  viewport={{ once: true, amount: 0.5 }}
-                >
-                  <Stack className="card">
-                    <div className="card-icon">
-                      <IconButton
-                        sx={{
-                          bgcolor: "#eee",
-                          "&:hover": { bgcolor: "#fff" },
-                          width: "2rem",
-                          height: "2rem",
+        <Stack justifyContent={"center"} alignItems={"center"}>
+          <Stack
+            direction={"row"}
+            display={"flex"}
+            justifyContent={"center"}
+            flexWrap={"wrap"}
+            gap={"1.5rem"}
+            className="product-card"
+          >
+            {(() => {
+              const displayPosts = [];
+              for (let i = startPageIndex; i <= endPageIndex; i++) {
+                const data = filteredProducts[i];
+                if (!data) continue;
+                displayPosts.push(
+                  <motion.div
+                    key={i}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    viewport={{ once: true, amount: 0.5 }}
+                  >
+                    <Stack className="card">
+                      <div className="card-icon">
+                        <IconButton
+                          sx={{
+                            bgcolor: "#eee",
+                            "&:hover": { bgcolor: "#fff" },
+                            width: "2rem",
+                            height: "2rem",
+                          }}
+                          onClick={() => handleAddCart(data)}
+                        >
+                          {data.inCart ? (
+                            <ShoppingBagIcon sx={{ color: "#6a5acd" }} />
+                          ) : (
+                            <ShoppingBagOutlinedIcon
+                              sx={{
+                                color: "#444",
+                                "&:hover": { color: "#6a5acd" },
+                              }}
+                            />
+                          )}
+                        </IconButton>
+                        <IconButton
+                          sx={{
+                            bgcolor: "#eee",
+                            "&:hover": { bgcolor: "#fff" },
+                            width: "2rem",
+                            height: "2rem",
+                          }}
+                        >
+                          {data.liked ? (
+                            <FavoriteIcon sx={{ color: "#6a5acd" }} />
+                          ) : (
+                            <FavoriteBorderIcon
+                              sx={{
+                                color: "#444",
+                                "&:hover": { color: "#6a5acd" },
+                              }}
+                            />
+                          )}
+                        </IconButton>
+                      </div>
+                      <img src={data.image} alt={data.name} />
+                      <Stack
+                        textAlign="center"
+                        spacing={"0.3rem"}
+                        mt={"0.5rem"}
+                        sx={{ cursor: "pointer" }}
+                        onClick={() => {
+                          navigate(`/card-detail/${data.id}`);
                         }}
-                        onClick={() => handleAddCart(data)}
                       >
-                        {data.inCart ? (
-                          <ShoppingBagIcon sx={{ color: "#6a5acd" }} />
-                        ) : (
-                          <ShoppingBagOutlinedIcon
-                            sx={{
-                              color: "#444",
-                              "&:hover": { color: "#6a5acd" },
-                            }}
-                          />
-                        )}
-                      </IconButton>
-                      <IconButton
-                        sx={{
-                          bgcolor: "#eee",
-                          "&:hover": { bgcolor: "#fff" },
-                          width: "2rem",
-                          height: "2rem",
-                        }}
-                      >
-                        {data.liked ? (
-                          <FavoriteIcon sx={{ color: "#6a5acd" }} />
-                        ) : (
-                          <FavoriteBorderIcon
-                            sx={{
-                              color: "#444",
-                              "&:hover": { color: "#6a5acd" },
-                            }}
-                          />
-                        )}
-                      </IconButton>
-                    </div>
-                    <img src={data.image} alt={data.name} />
-                    <Stack
-                      textAlign="center"
-                      spacing={"0.3rem"}
-                      mt={"0.5rem"}
-                      sx={{ cursor: "pointer" }}
-                      onClick={() => {
-                        navigate(`/card-detail/${data.id}`);
-                      }}
-                    >
-                      <Typography
-                        variant="h5"
-                        fontSize="1.2rem"
-                        fontWeight="550"
-                      >
-                        {data.name}
-                      </Typography>
-                      <Typography
-                        variant="span"
-                        fontSize="1.1rem"
-                        fontWeight="bold"
-                        color="#6a5acd"
-                      >
-                        ${data.price}
-                      </Typography>
+                        <Typography
+                          variant="h5"
+                          fontSize="1.2rem"
+                          fontWeight="550"
+                        >
+                          {data.name}
+                        </Typography>
+                        <Typography
+                          variant="span"
+                          fontSize="1.1rem"
+                          fontWeight="bold"
+                          color="#6a5acd"
+                        >
+                          ${data.price}
+                        </Typography>
+                      </Stack>
                     </Stack>
-                  </Stack>
-                </motion.div>
-              );
-            }
-            return displayPosts;
-          })()}
+                  </motion.div>
+                );
+              }
+              return displayPosts;
+            })()}
 
-          {/* Pagination below */}
+            {/* Pagination below */}
+          </Stack>
           <Pagination
             style={{ marginTop: "2rem" }}
             sx={{

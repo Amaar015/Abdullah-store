@@ -1,34 +1,5 @@
 import image from "../assets/products/p-1.jpg";
 
-export const departments = [
-  { id: 1, title: "Mens", totalCount: 200 },
-  { id: 2, title: "Kids", totalCount: 100 },
-  { id: 3, title: "Womens", totalCount: 150 },
-];
-export const category = [
-  { id: 1, title: "Tees", totalCount: 80 },
-  { id: 2, title: "Accessories", totalCount: 5 },
-  { id: 3, title: "Polos", totalCount: 20 },
-  { id: 4, title: "Sweetshirts", totalCount: 10 },
-  { id: 5, title: "Pants", totalCount: 30 },
-  { id: 6, title: "Jackets", totalCount: 60 },
-  { id: 7, title: "Sweater", totalCount: 40 },
-  { id: 8, title: "Shorts", totalCount: 20 },
-  { id: 9, title: "Swimwear", totalCount: 30 },
-  { id: 10, title: "Casual Shirt", totalCount: 10 },
-];
-export const size = ["XXS", "XS", "S", "M", "L", "XL", "XXL", "XXXL"];
-export const colors = [
-  "black",
-  "blue",
-  "white",
-  "purple",
-  "red",
-  "green",
-  "pink",
-  "gray",
-  "brown",
-];
 export const PriceRange = [
   {
     id: 1,
@@ -63,7 +34,7 @@ export const recentSearch = [
     price: 50.4,
     price_before: 100.08,
     stock: 20,
-    category: "Man",
+    category: "Mens",
     variety: "Jacket",
     image: "/products/p-1.1.webp",
     images: [
@@ -97,8 +68,8 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Women",
-    variety: "Hangbag",
+    category: "Womens",
+    variety: "Handbag",
     image: "/products/p-2.1.jpg",
     images: [
       "/products/p-2.1.jpg",
@@ -130,7 +101,7 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Men",
+    category: "Mens",
     size: [6, 7, 8, 9, 10],
     variety: "Shoes",
     image: "/products/p-5.1.jpg",
@@ -164,7 +135,7 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Women",
+    category: "Womens",
     variety: "Shoes",
     size: [6, 7, 8, 9, 10],
     image: "/products/p-7.1.jpg",
@@ -199,8 +170,8 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Women",
-    variety: "Hangbag",
+    category: "Womens",
+    variety: "Handbag",
     image: "/products/p-4.1.jpg",
     images: [
       "/products/p-4.1.jpg",
@@ -232,7 +203,7 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Men",
+    category: "Mens",
     variety: "Shoes",
     size: [6, 7, 8, 9, 10],
     image: "/products/p-6.1.jpeg",
@@ -266,8 +237,8 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Men",
-    variety: "Men Hand Watch",
+    category: "Mens",
+    variety: "Watch",
     image: "/products/p-9.1.webp",
     images: [
       "/products/p-9.1.webp",
@@ -299,9 +270,9 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Men",
+    category: "Mens",
     size: ["S", "M", "L", "XXL"],
-    variety: "Men White Shirt",
+    variety: "Clothes",
     image: "/products/p-13.1.webp",
     images: [
       "/products/p-13.1.webp",
@@ -333,9 +304,9 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Men",
+    category: "Mens",
     size: [5, 6, 7, 8, 9, 10],
-    variety: "Men Shoes",
+    variety: "Shoes",
     image: "/products/p-10.1.jpg",
     images: [
       "/products/p-10.1.jpg",
@@ -369,7 +340,7 @@ export const recentSearch = [
     stock: 20,
     category: "Kids",
     size: ["S", "M"],
-    variety: "Kids Clothes",
+    variety: "Clothes",
     image: "/products/p-14.1.jpeg",
     images: [
       "/products/p-14.1.jpeg",
@@ -401,8 +372,8 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Women",
-    variety: "Women",
+    category: "Womens",
+    variety: "Handbag",
     image: "/products/p-3.1.jpg",
     images: [
       "/products/p-3.1.jpg",
@@ -434,9 +405,9 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Man",
+    category: "Mens",
     size: ["S", "M", "L", "XXL"],
-    variety: "Kids Clothes",
+    variety: "Clothes",
     image: "/products/p-12.1.jpg",
     images: [
       "/products/p-12.1.jpg",
@@ -468,9 +439,9 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Women",
+    category: "Womens",
     size: [5, 6, 7, 8, 9, 10],
-    variety: "shoes",
+    variety: "Shoes",
     image: "/products/p-8.1.jpeg",
     images: [
       "/products/p-8.1.jpeg",
@@ -502,9 +473,9 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Men",
+    category: "Mens",
     size: [5, 6, 7, 8, 9, 10],
-    variety: "shoes",
+    variety: "Shoes",
     image: "/products/p-11.1.jpg",
     images: [
       "/products/p-11.1.jpg",
@@ -536,7 +507,7 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "women",
+    category: "Womens",
     variety: "jewellery",
     image: "/products/p-15.1.jpeg",
     images: [
@@ -571,7 +542,7 @@ export const recentSearch = [
     stock: 20,
     category: "Kids",
     size: ["S"],
-    variety: "shoes",
+    variety: "Shoes",
     image: "/products/p-16.1.jpg",
     images: [
       "/products/p-16.1.jpg",
@@ -604,7 +575,7 @@ export const recentSearch = [
     price_before: 150.08,
     stock: 20,
     category: "Mens",
-    variety: "glasses",
+    variety: "Glasses",
     image: "/products/p-17.1.webp",
     images: [
       "/products/p-17.1.webp",
@@ -638,7 +609,7 @@ export const recentSearch = [
     stock: 20,
     category: "Mens",
     size: ["S", "M", "L", "XXL"],
-    variety: "clothes",
+    variety: "Clothes",
     image: "/products/p-19.1.jpg",
     images: [
       "/products/p-19.1.jpg",
@@ -670,8 +641,8 @@ export const recentSearch = [
     price: 100.43,
     price_before: 150.08,
     stock: 20,
-    category: "Men",
-    variety: "perfume",
+    category: "Mens",
+    variety: "Perfume",
     image: "/products/p-20.1.webp",
     images: [
       "/products/p-20.1.webp",
@@ -703,7 +674,7 @@ export const recentSearch = [
     price_before: 150.08,
     stock: 20,
     category: "Mens",
-    variety: "glasses",
+    variety: "Glasses",
     image: "/products/p-18.1.jpg",
     images: [
       "/products/p-18.1.jpg",
