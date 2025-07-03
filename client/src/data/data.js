@@ -103,8 +103,8 @@ export const recentSearch = [
     images: [
       "/products/p-2.1.jpg",
       "/products/p-2.2.jpg",
-      "/products/p-2.3.jpg",
-      "/products/p-2.4.jpg",
+      "/products/p-2.3.jpeg",
+      "/products/p-2.4.jpeg",
     ],
     color: "brown",
     description:
@@ -136,7 +136,7 @@ export const recentSearch = [
     image: "/products/p-5.1.jpg",
     images: [
       "/products/p-5.1.jpg",
-      "/products/p-5.2.jpg",
+      "/products/p-5.2.jpeg",
       "/products/p-5.3.jpg",
       "/products/p-5.4.jpg",
     ],
@@ -170,7 +170,7 @@ export const recentSearch = [
     image: "/products/p-7.1.jpg",
     images: [
       "/products/p-7.1.jpg",
-      "/products/p-7.2.jpg",
+      "/products/p-7.2.jpeg",
       "/products/p-7.3.jpg",
       "/products/p-7.4.jpg",
     ],
@@ -204,8 +204,8 @@ export const recentSearch = [
     image: "/products/p-4.1.jpg",
     images: [
       "/products/p-4.1.jpg",
-      "/products/p-4.2.jpg",
-      "/products/p-4.3.jpg",
+      "/products/p-4.2.jpeg",
+      "/products/p-4.3.jpeg",
       "/products/p-4.4.jpg",
     ],
     color: "green",
@@ -272,7 +272,7 @@ export const recentSearch = [
     images: [
       "/products/p-9.1.webp",
       "/products/p-9.2.webp",
-      "/products/p-9.3.webp",
+      "/products/p-9.3.jpeg",
       "/products/p-9.4.webp",
     ],
     color: "black",
@@ -339,9 +339,9 @@ export const recentSearch = [
     image: "/products/p-10.1.jpg",
     images: [
       "/products/p-10.1.jpg",
-      "/products/p-10.1.jpg",
-      "/products/p-10.1.jpg",
-      "/products/p-10.1.jpg",
+      "/products/p-10.2.webp",
+      "/products/p-10.3.jpg",
+      "/products/p-10.4.webp",
     ],
     color: "brown",
     description:
@@ -440,11 +440,11 @@ export const recentSearch = [
     image: "/products/p-12.1.jpg",
     images: [
       "/products/p-12.1.jpg",
-      "/products/p-12.2.jpeg",
+      "/products/p-12.2.jpg",
       "/products/p-12.3.jpg",
       "/products/p-12.4.jpg",
     ],
-    color: "white",
+    color: "navyblue",
     description:
       "Man in Zip up jacket are stylish, durable footwear made from high-quality leather, offering a sleek appearance and long-lasting comfort for daily wear. They seamlessly combine fashion and function, making them perfect for both casual and semi-formal occasions.",
     benefits: [
@@ -574,10 +574,10 @@ export const recentSearch = [
     variety: "shoes",
     image: "/products/p-16.1.jpg",
     images: [
-      "/products/p-14.1.jpg",
-      "/products/p-14.2.jpeg",
-      "/products/p-14.3.webp",
-      "/products/p-14.4.webp",
+      "/products/p-16.1.jpg",
+      "/products/p-16.2.jpeg",
+      "/products/p-16.3.webp",
+      "/products/p-16.4.webp",
     ],
     color: "pink",
     description:
@@ -709,7 +709,7 @@ export const recentSearch = [
       "/products/p-18.1.jpg",
       "/products/p-18.2.jpg",
       "/products/p-18.3.jpeg",
-      "/products/p-18.4.jpeg",
+      "/products/p-18.4.jpg",
     ],
     color: "white",
     description:

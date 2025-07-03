@@ -8,8 +8,13 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import HomeIcon from "@mui/icons-material/Home";
 import Comments from "../sections/Comments";
 import { addToCart } from "../utils/cartUtils";
+import { useParams } from "react-router-dom";
 const CardDetails = () => {
-  const product = recentSearch.find((item) => item.id === 4);
+  const { id } = useParams();
+  console.log(id);
+  const product = recentSearch.find((item) => item.id === Number(id));
+  console.log(product);
+  console.log(recentSearch);
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setselectedColor] = useState("brown");
   const handleAddCart = (product) => {
@@ -26,7 +31,7 @@ const CardDetails = () => {
         gap={"2rem"}
         padding={"3rem 0rem"}
       >
-        <Stack width={{ xs: "95%", sm: "80%", md: "40%" }} spacing={2}>
+        <Stack width={{ xs: "95%", sm: "80%", md: "45%" }} spacing={2}>
           <Stack
             width={"100%"}
             direction={"row"}
@@ -36,7 +41,7 @@ const CardDetails = () => {
             flexWrap={"wrap"}
             gap={"10px"}
           >
-            {product.images?.map((image) => (
+            {product?.images.map((image) => (
               <img src={image} alt="" className="card-detail-image" />
             ))}
           </Stack>
@@ -46,16 +51,16 @@ const CardDetails = () => {
             </Typography>
             <Divider sx={{ height: "1px", bgcolor: "#D1D5DB" }} />
             <Typography fontSize={"16px"} color="#6B7280">
-              {product.description}
+              {product?.description}
             </Typography>
-            {product.benefits.map((benefit) => (
+            {product?.benefits.map((benefit) => (
               <Typography fontSize={"16px"} color="#6B7280">
                 ✔️ {benefit}
               </Typography>
             ))}
           </Stack>
         </Stack>
-        <Stack spacing={3} width={{ xs: "95%", sm: "80%", md: "40%" }}>
+        <Stack spacing={3} width={{ xs: "95%", sm: "80%", md: "45%" }}>
           <div>
             <Typography
               textTransform={"uppercase"}
@@ -63,10 +68,10 @@ const CardDetails = () => {
               color="#6B7280"
               fontWeight={"550"}
             >
-              {product.category}s {product.variety}
+              {product?.category}s {product?.variety}
             </Typography>
             <Typography fontWeight={"bold"} fontSize={"2rem"} color="#333">
-              {product.name}
+              {product?.name}
             </Typography>
           </div>
           <Stack
@@ -88,10 +93,10 @@ const CardDetails = () => {
                 fontWeight={"550"}
                 color="#6B7280"
               >
-                ${product.price_before}
+                ${product?.price_before}
               </Typography>
               <Typography fontSize={"24px"} fontWeight={"550"} color="#6a5acd">
-                ${product.price}
+                ${product?.price}
               </Typography>
             </Stack>
             <Typography>✔️ In Stock</Typography>
@@ -108,7 +113,7 @@ const CardDetails = () => {
                   color: "#6B7280",
                 }}
               >
-                {selectedColor}
+                {product.color}
               </span>{" "}
               )
             </Typography>
@@ -120,17 +125,17 @@ const CardDetails = () => {
               flexWrap={"wrap"}
               gap={"0.8rem"}
             >
-              {product.color.map((data) => (
-                <button
-                  className={
-                    selectedColor === data
-                      ? "color-btn selected-color"
-                      : "color-btn"
-                  }
-                  style={{ background: `${data}` }}
-                  onClick={() => setselectedColor(data)}
-                ></button>
-              ))}
+              {/* {product.color.map((data) => ( */}
+              <button
+                className={
+                  selectedColor === product.color
+                    ? "color-btn selected-color"
+                    : "color-btn"
+                }
+                style={{ background: `${product.color}` }}
+                onClick={() => setselectedColor(data)}
+              ></button>
+              {/* ))} */}
             </Stack>
           </Stack>
           <Divider sx={{ height: "1px", bgcolor: "#D1D5DB" }} />{" "}
@@ -146,7 +151,7 @@ const CardDetails = () => {
               flexWrap={"wrap"}
               gap={"0.8rem"}
             >
-              {product.size.map((data) => (
+              {product?.size?.map((data) => (
                 <button
                   className={
                     selectedSize === data ? "size-btn selected" : "size-btn"

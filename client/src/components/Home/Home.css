@@ -1,17 +1,6 @@
-.new-arrivals .swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-button-prev {
-  color: #6a5acd;
-}
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 20px;
-}
-.swiper-button-next {
-  color: #6a5acd;
+.new-arrivals .slick-prev:before,
+.new-arrivals .slick-next:before {
+  display: none !important;
 }
 
 .categories {
@@ -23,7 +12,7 @@
   position: relative;
 }
 .categories img {
-  width: 100%;
+  width: 90%;
   height: 100%;
   object-fit: cover;
 }
