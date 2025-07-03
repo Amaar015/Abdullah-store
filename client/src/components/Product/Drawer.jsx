@@ -9,12 +9,7 @@ import {
 } from "../../data/data";
 import "./style.css";
 import { Buttons, Buttonss } from "../styled-components/Buttons";
-export const DrawerContent = ({ onCloseDrawer, width }) => {
-  const [selectedDepartment, setSelectedDepartment] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedSize, setSelectedSize] = useState("");
-  const [selectedColor, setselectedColor] = useState("");
-  const [selectedRanges, setSelectedRanges] = useState("");
+export const DrawerContent = ({ onCloseDrawer, width, filter, setFilter }) => {
   const handleChange = (event) => {
     setSelectedDepartment(event.target.value);
   };
@@ -33,11 +28,14 @@ export const DrawerContent = ({ onCloseDrawer, width }) => {
   };
 
   const handleReset = () => {
-    setSelectedDepartment("");
-    setSelectedCategory("");
-    setSelectedSize("");
-    setselectedColor("");
-    setSelectedRanges("");
+    setFilter({
+      category: "",
+      variety: "",
+      size: "",
+      color: "",
+      priceMin: 0,
+      priceMax: 9999,
+    });
   };
   useEffect(() => {
     const handleResize = () => {
@@ -53,6 +51,8 @@ export const DrawerContent = ({ onCloseDrawer, width }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+
+    // filters function
   }, []);
 
   return (

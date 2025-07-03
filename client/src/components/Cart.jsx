@@ -84,7 +84,7 @@ const Cart = ({ open, handleClose, handleOpen }) => {
                 <Stack
                   marginTop={"0.5rem"}
                   padding={"0.5rem 1rem"}
-                  gap={"2rem"}
+                  gap={"1rem"}
                   justifyContent={{ xs: "space-between" }}
                   alignItems={"center"}
                   direction={"row"}
@@ -132,8 +132,8 @@ const Cart = ({ open, handleClose, handleOpen }) => {
                   $ {totalPrice.toFixed(2)}
                 </Typography>
               </Stack>
-              <Stack alignItems={"center"}>
-                <Buttons title={"Checkout"} />
+              <Stack alignItems={"center"} onClick={handleClose}>
+                <Buttons title={"Checkout"} link={"/cart"} />
               </Stack>
             </>
           )}

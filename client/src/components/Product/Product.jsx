@@ -29,6 +29,14 @@ import { addToCart } from "../../utils/cartUtils";
 const Product = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+  const [filters, setFilters] = useState({
+    category: "",
+    variety: "",
+    size: "",
+    color: "",
+    priceMin: 0,
+    priceMax: 9999,
+  });
   const [
     totalPages,
     startPageIndex,
@@ -46,6 +54,22 @@ const Product = () => {
       if (window.innerWidth >= 900) {
         setOpen(false);
       }
+      // Apply here filter
+      const result = recentSearch.filter((products) => {
+        const matchCategory = filters.category
+          ? products.category.toLowerCase() === filters.category.toLowerCase()
+          : true;
+        const matchVatriety = filters.variety
+          ? products.category.toLowerCase() === filters.category.toLowerCase()
+          : true;
+        const matchColor = filters.color
+          ? products.category.toLowerCase() === filters.category.toLowerCase()
+          : true;
+        const matchSize = filters.size
+          ? products.category.toLowerCase() === filters.category.toLowerCase()
+          : true;
+        const matchPrice =  products.price >= filters.priceMin && products.price <=  
+      });
     };
 
     window.addEventListener("resize", handleResize);
@@ -56,13 +80,7 @@ const Product = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const handleReset = () => {
-    setSelectedDepartment("");
-    setSelectedCategory("");
-    setSelectedSize("");
-    setselectedColor("");
-    setSelectedRanges("");
-  };
+
   return (
     <Stack
       spacing={2}
@@ -74,7 +92,12 @@ const Product = () => {
     >
       {/* Fillter section */}
       <Stack display={{ xs: "none", md: "inline" }} width={"25%"}>
-        <DrawerContent width={"100%"} onCloseDrawer={() => setOpen(false)} />
+        <DrawerContent
+          width={"100%"}
+          onCloseDrawer={() => setOpen(false)}
+          filter={filters}
+          setFilter={setFilters}
+        />
       </Stack>
       {/* Product section */}
       <Stack
@@ -110,7 +133,8 @@ const Product = () => {
             <DrawerContent
               width={"250px"}
               onCloseDrawer={() => setOpen(false)}
-              handleReset={handleReset}
+              filter={filters}
+              setFilter={setFilters}
             />
           </SwipeableDrawer>
         </Stack>

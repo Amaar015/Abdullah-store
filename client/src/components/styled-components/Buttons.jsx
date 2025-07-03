@@ -1,8 +1,16 @@
 import React from "react";
 import "./Style.css";
 import { useNavigate } from "react-router-dom";
-export const Buttons = ({ title }) => {
-  return <button className="btn">{title}</button>;
+export const Buttons = ({ title, link }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(link);
+  };
+  return (
+    <button className="btn" onClick={handleClick}>
+      {title}
+    </button>
+  );
 };
 
 export const Buttonss = ({ title, link }) => {

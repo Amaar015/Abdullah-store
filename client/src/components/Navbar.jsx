@@ -128,9 +128,9 @@ const Navbar = () => {
             <Menu
               anchorEl={anchorEl}
               id="account-menu"
-              open={open}
-              onClose={handleClose}
-              onClick={handleClose}
+              open={openMenu}
+              onClose={handleCloseMenu}
+              onClick={handleCloseMenu}
               slotProps={{
                 paper: {
                   elevation: 0,
@@ -162,20 +162,20 @@ const Navbar = () => {
               transformOrigin={{ horizontal: "right", vertical: "top" }}
               anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
             >
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={handleCloseMenu}>
                 <Avatar /> Profile
               </MenuItem>
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={handleCloseMenu}>
                 <ShoppingBagIcon /> My Orders
               </MenuItem>
               <Divider />
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={handleCloseMenu}>
                 <ListItemIcon>
                   <ReceiptIcon fontSize="small" />
                 </ListItemIcon>
                 Review
               </MenuItem>
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={handleCloseMenu}>
                 <ListItemIcon>
                   <LogoutIcon fontSize="small" />
                 </ListItemIcon>
