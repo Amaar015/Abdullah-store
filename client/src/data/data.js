@@ -167,7 +167,7 @@ export const recentSearch = [
   {
     id: 5,
     name: "Elegant Green Leather Bag",
-    price: 100.43,
+    price: 104,
     price_before: 150.08,
     stock: 20,
     category: "Womens",
@@ -234,7 +234,7 @@ export const recentSearch = [
   {
     id: 7,
     name: "Men Hand Watch",
-    price: 100.43,
+    price: 129,
     price_before: 150.08,
     stock: 20,
     category: "Mens",
