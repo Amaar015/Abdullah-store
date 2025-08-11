@@ -1,31 +1,63 @@
 import mongoose from "mongoose";
 
-const productSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
+const productSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    price: {
+      type: Number,
+      required: true,
+    },
+    price_before: {
+      type: Number,
+    },
+    stock: {
+      type: Number,
+      required: true,
+      min: 0,
+    },
+    category: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    variety: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    images: {
+      type: [String],
+      validate: {
+        validator: function (arr) {
+          return arr.length > 0;
+        },
+        message: "At least one image is required",
+      },
+    },
+    size: {
+      type: [String],
+      enum: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+      default: [],
+    },
+    color: {
+      type: String,
+      trim: true,
+    },
+    description: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    benefits: {
+      type: [String],
+      default: [],
+    },
   },
-  price: {
-    type: Number,
-    required: true,
-  },
-  price_before: {
-    type: Number,
-  },
-  stock: {
-    type: Number,
-    default: 0,
-  },
-  category: { type: String },
-  variety: { type: String },
-  images: [{ type: String }],
-  size: [{ type: String }],
-  color: { type: String },
-  description: { type: String },
-  benefits: [{ type: String }],
-  inCart: { type: Boolean },
-});
+  { timestamps: true }
+);
 
-const Products = mongoose.model("products", productSchema);
-
-export default Products;
+export default mongoose.model("product", productSchema);

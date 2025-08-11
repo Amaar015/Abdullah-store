@@ -4,9 +4,10 @@ import colors from "colors";
 import "dotenv/config";
 import http from "http";
 import { connectDB } from "./db/connection.js";
-import router from "./routes/product.js";
 import path from "path";
 import { fileURLToPath } from "url";
+import Authrouter from "./routes/user.js";
+import Productrouter from "./routes/product.js";
 
 const app = express();
 const server = http.createServer(app);
@@ -22,8 +23,9 @@ const __dirname = path.dirname(__filename);
 // Serve static files from uploads folder
 
 // add routes here
+app.use("/api/v1/auth", Authrouter);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-app.use("/api/v1/product", router);
+app.use("/api/v1/product", Productrouter);
 // connect databse
 
 await connectDB();

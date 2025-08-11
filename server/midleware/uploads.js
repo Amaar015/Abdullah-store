@@ -2,22 +2,30 @@ import multer from "multer";
 import path from "path";
 
 const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads/");
+  destination: (req, file, cb) => {
+    cb(null, "uploads/"); // local folder to save images
   },
-  filename: function (req, file, cb) {
-    const uniqueName = Date.now() + "-" + file.originalname;
-    cb(null, uniqueName);
+  filename: (req, file, cb) => {
+    cb(
+      null,
+      Date.now() + path.extname(file.originalname) // unique filename
+    );
   },
 });
 
 const fileFilter = (req, file, cb) => {
-  const ext = path.extname(file.originalname);
-  if (ext !== ".jpg" && ext !== ".jpeg" && ext !== ".png") {
-    return cb(new Error("Only images are allowed"));
+  const allowedTypes = /jpeg|jpg|png/;
+  const extname = allowedTypes.test(
+    path.extname(file.originalname).toLowerCase()
+  );
+  const mimetype = allowedTypes.test(file.mimetype);
+  if (extname && mimetype) {
+    cb(null, true);
+  } else {
+    cb("Error: Images Only!");
   }
-  cb(null, true);
 };
+
 export const upload = multer({
   storage,
   fileFilter,
